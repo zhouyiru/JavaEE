@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!--IOC容器， 给对象属性赋值 -->
+	
+	<bean id="user" class="cn.itcast.c_di.User">
+		<property name="id" value="1000"></property>
+		<property name="name" value="Jacky"></property>
+		<!-- list集合赋值 -->
+		<property name="list">
+			<list>
+				<value>cn</value>
+				<value>usa</value>
+			</list>
+		</property>
+		<!-- map 集合赋值 -->
+		<property name="map">
+			<map>
+				<entry key="cn" value="China"></entry>
+				<entry key="usa" value="1234"></entry>
+			</map>
+		</property>
+		<!-- Properties对象赋值 -->
+		<property name="prop">
+			<props>
+				<prop key="cn">China</prop>
+				<prop key="usa">America</prop>
+			</props>
+		</property>
+	</bean>
+	
+	
+</beans>      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

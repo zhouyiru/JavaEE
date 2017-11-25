@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<!-- 通过别名简化对类的使用 -->
+<typeAliases>
+		<typeAlias type="cn.it.entity.Dept" alias="Dept" />
+</typeAliases>
+
+
+<!--environments指定数据源环境，default指的是使用哪个数据源  -->
+	<environments default="development">
+	<!--environment定义数据源的信息  -->
+		<environment id="development">
+		<!-- type="JDBC"表示事务由jdbc连接管理，type="MANAGED"表示事务由容器来管理 -->
+			<transactionManager type="JDBC" />
+			<!-- type="POOLED"表示使用连接池， type="UNPOOLED"表示不使用连接池 -->
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.jdbc.Driver" />
+				<property name="url" value="jdbc:mysql://localhost:3306/mybatis?useUnicode=true&amp;characterEncoding=UTF-8" />
+				<property name="username" value="root" />
+				<property name="password" value="root" />
+			</dataSource>
+		</environment>
+
+	</environments>
+	<!-- 加入映射文件信息 -->
+ 	<mappers>
+		<mapper resource="cn/it/entity/DeptMapper.xml" />
+	</mappers> 
+</configuration>

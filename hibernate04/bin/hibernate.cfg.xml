@@ -1,0 +1,58 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+    	<!-- 一、 数据库连接的参数配置 -->
+    	<property name="hibernate.connection.url">jdbc:mysql:///hib_demo</property>
+    	<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    	<property name="hibernate.connection.username">root</property>
+    	<property name="hibernate.connection.password">root</property>
+    	<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    
+    	<!-- 二、 hibernate其他常用配置 -->
+    	<property name="hibernate.show_sql">true</property>
+    	<!--<property name="hibernate.format_sql">true</property>-->
+    	<property name="hibernate.hbm2ddl.auto">update</property>
+    	
+    	<!-- 
+    		hibernate对连接池的支持
+    	 -->
+    	 <!-- C3p0连接池支持类 -->
+    	 <property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+    	 <!-- 最大连接数 -->
+    	 <property name="hibernate.c3p0.max_size">6</property>
+    	 <!-- 最小连接数 -->
+    	 <property name="hibernate.c3p0.min_size">4</property>
+    	 <!-- 当连接不够用时候每次的增量 -->
+    	 <property name="hibernate.c3p0.acquire_increment">2</property>
+    	 <!-- 最多执行的命令的个数 -->
+    	 <property name="hibernate.c3p0.max_statements">100</property>
+    	 <!-- 连接空闲测试时间 -->
+    	 <property name="hibernate.c3p0.idle_test_period">3000</property>
+    	
+    	
+    	 <!-- 配置session的创建方式，线程方式创建session -->
+    	 <property name="hibernate.current_session_context_class">thread</property>
+    	
+    	<!-- 三、二级缓存配置 -->
+    	<!-- 1) 开启二级缓存 
+    	<property name="hibernate.cache.use_second_level_cache">true</property>
+    	 2) 指定使用哪一种二级缓存 
+    	<property name="hibernate.cache.provider_class">org.hibernate.cache.HashtableCacheProvider</property>
+    	 开启查询缓存 
+    	<property name="hibernate.cache.use_query_cache">true</property>
+    	 3) 加入二级缓存的类 
+    	<class-cache usage="read-write" class="cn.itcast.b_second_cache.Dept"/>
+    	<class-cache usage="read-write" class="cn.itcast.b_second_cache.Employee"/>
+    	 集合缓存 (集合缓存，集合元素也要放入二级缓存)
+    	<collection-cache usage="read-only" collection="cn.itcast.b_second_cache.Dept.employees"/>
+    	
+    	--><!-- 三、加载映射文件
+    	<mapping resource="cn/itcast/a_status/Employee.hbm.xml"/>
+    	<mapping resource="cn/itcast/b_lazy/Employee.hbm.xml"/>
+    	 -->
+    	
+    </session-factory>
+</hibernate-configuration>

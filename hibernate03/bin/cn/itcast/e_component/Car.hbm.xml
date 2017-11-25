@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cn.itcast.e_component">
+	<class name="Car" table="t_car">
+		<id name="id">
+			<generator class="native"></generator>
+		</id>
+		<property name="type"></property>
+		
+		<!-- 组件映射 -->
+		<component name="wheel" class="Wheel">
+			<property name="count"></property>
+			<property name="size"></property>
+		</component>
+	</class>
+	
+
+</hibernate-mapping>
+
+
+
+
+
+
+

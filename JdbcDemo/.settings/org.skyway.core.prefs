@@ -1,0 +1,5 @@
+#org.skyway.core settings
+#Fri Apr 21 11:40:42 CST 2017
+version=11.0.1.me201405280815
+models.folder.name=.springDSL
+initialized=true

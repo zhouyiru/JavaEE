@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cn.itcast.f_extends1">
+	<class name="Dog" table="t_dog">
+		<!-- 继承父类的属性，直接写 -->
+		<id name="id">
+			<generator class="native"></generator>
+		</id>
+		<property name="name" length="20"></property>
+		
+		<!-- 子类属性 -->
+		<property name="play" length="20"></property>
+		
+	</class>
+</hibernate-mapping>
+
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<package name="default" extends="struts-default" namespace="/" abstract="false">
+		    <!--配置登陆 -->			
+			<action name="loginAction" class="com.action.LoginAction" method="login">
+                <result name="success">success.jsp</result>
+			    <result name="input">index.jsp</result>
+			</action>
+			<!-- 配置退出 -->
+	    	<action name="logoutAction" class="com.action.LoginAction" method="logout">         
+		    <result name="input">index.jsp</result>
+			</action>	
+		
+	</package>
+</struts>    

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- 
+	通过XML映射，把对象映射到数据库的表中！
+ -->
+<hibernate-mapping package="cn.itcast.a_config">
+	
+	<class name="Users" table="users">
+		<id name="userId" column="id">
+			<generator class="native"></generator>
+		</id>
+		<property name="userName" column="name"></property>
+		<property name="age" column="age"></property>
+	</class>
+
+</hibernate-mapping>

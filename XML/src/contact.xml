@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+<contact 
+	id="001" 
+	name="张三" 
+	gender="男" 
+	phone="13411112222" 
+	email="zhangsan@qq.com" 
+	address="广州天河">
+</contact>
+ -->
+<contact-list>
+	 <contact id="001">
+	 	 <name>张三</name>
+	 	 <gender>男</gender>
+	 	 <phone>13411112222</phone>
+	 	 <email>zhangsan@qq.com</email>
+	 	 <address>广州天河</address>
+	 </contact>
+	  <contact id="002">
+	 	 <name>李四</name>
+	 	 <gender>女</gender>
+	 	 <phone>13511112222</phone>
+	 	 <email>lisi@qq.com</email>
+	 	 <address>广州越秀</address>
+	 </contact>
+ </contact-list>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.it.entity.DeptMapper">
+<!--resultMap用于查询，可以把查询后字段值封装到对应类的属性， type指定的是对应的实体类 -->
+<resultMap type="Dept" id="deptResultMap">
+<!-- id用来配置表的主键与类的属性的映射关系 ,column指定的是表的字段名； property指定的是类的属性名-->
+<id column="dept_id" property="deptId"/>
+<!-- result用来配置 普通字段与类的属性的映射关系 ,column指定的是表的字段名； property指定的是类的属性名-->
+<result column="dept_name" property="deptName"/>
+<result column="dept_address" property="deptAddress"/>
+</resultMap>
+
+
+<!-- 根据部门地址查询多个部门信息 -->
+<!-- 如果返回的是list，resultMap指定的值是list集合里元素的类型-->
+<select id="selectListUseIf" parameterType="Dept" resultMap="deptResultMap" >
+	select dept_id,dept_name,dept_address from dept where 1=1 
+	<if test="deptId!=null">and dept_id = #{deptId}</if>
+	<if test="deptName!=null">and dept_name = #{deptName}</if>	 
+	<if test="deptAddress!=null">and dept_address = #{deptAddress}</if>	
+</select>
+
+<select id="selectListUseWhere" parameterType="Dept" resultMap="deptResultMap" >
+	select dept_id,dept_name,dept_address from dept 
+	<where>
+		<if test="deptId!=null">and dept_id = #{deptId}</if>
+		<if test="deptName!=null">and dept_name = #{deptName}</if>	 
+		<if test="deptAddress!=null">and dept_address = #{deptAddress}</if>	
+	</where>
+</select>
+
+<select id="selectListUseChoose" parameterType="Dept" resultMap="deptResultMap" >
+	select dept_id,dept_name,dept_address from dept 
+	<where>
+		<choose>
+			<when test="deptId!=null">and dept_id = #{deptId}</when>
+			<when test="deptName!=null">and dept_name = #{deptName}</when>
+			<when test="deptAddress!=null">and dept_address = #{deptAddress}</when>
+			<otherwise>and 1=2</otherwise>		
+		</choose>
+	</where>
+</select>
+
+<update id="updateDeptUseSet" parameterType="dept" >
+	update dept
+ 	<set>
+ 		<if test="deptName!=null">dept_name = #{deptName},</if>
+ 		<if test="deptAddress!=null">dept_address=#{deptAddress},</if> 	
+ 	</set>	
+	where dept_id = #{deptId}
+</update>
+
+<select id="selectListUseForeach" resultMap="deptResultMap">
+	select * from dept where dept_id in
+	<!--collection的值为"array"表示来的参数为数组（有[]）;值为list,表示来的参数是个list集合类型  -->
+		<foreach collection="list" item="deptId" separator="," open="(" close=")">
+			#{deptId}
+		</foreach>
+    
+</select>
+
+<insert id="insertDeptUseInclude" parameterType="dept">
+	insert into dept
+	<include refid="key"></include>
+	values
+	<include refid="value"></include>
+</insert>
+
+<sql id="key">
+	<trim suffixOverrides="," prefix="(" suffix=")">
+		<if test="deptName!=null">dept_name,</if>
+		<if test="deptAddress!=null">dept_address,</if>
+	</trim>
+</sql>
+<sql id="value">
+	<trim suffixOverrides="," prefix="(" suffix=")">
+		<if test="deptName!=null">#{deptName},</if>
+		<if test="deptAddress!=null">#{deptAddress},</if>
+	</trim>
+</sql>
+
+
+
+</mapper>

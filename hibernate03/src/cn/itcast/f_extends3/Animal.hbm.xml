@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<!-- 
+	每个类一张表， 三张表
+ -->
+<hibernate-mapping package="cn.itcast.f_extends3">
+	<class name="Animal" table="t_animal">
+		<id name="id">
+			<generator class="native"></generator>
+		</id>
+		
+		<property name="name" length="20"></property>
+		
+		<!-- 子类：猫 -->
+		<joined-subclass name="Cat" table="t_cat">
+			<key column="id"></key>
+			<property name="catching"></property>
+		</joined-subclass>
+		
+		<!-- 子类：狗 -->
+		<joined-subclass name="Dog" table="t_dog">
+			<key column="id"></key>
+			<property name="play"></property>
+		</joined-subclass>
+		
+		
+	</class>
+</hibernate-mapping>
+
+
+
+
+
+
+

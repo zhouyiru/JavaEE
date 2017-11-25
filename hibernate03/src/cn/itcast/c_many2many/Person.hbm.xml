@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cn.itcast.c_many2many">
+	<class name="Person" table="t_person">
+		
+		<id name="personId">
+			<generator class="native"></generator>
+		</id>
+		<property name="name" length="20"></property>
+		
+		<!-- 
+			多对多映射配置:
+		 -->
+		 <set name="projects" table="t_relation">
+		 	<key column="person_id"></key>
+		 	<many-to-many column="project_id" class="Project"></many-to-many>
+		 </set>
+		
+	</class>
+	
+
+</hibernate-mapping>
+
+
+
+
+
+
+

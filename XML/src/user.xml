@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<user-list>
+	<user id="001">
+		<name>贾莹莹</name>
+		<password>123456</password>
+	</user>
+	<user id="002">
+		<name>周奕儒</name>
+		<password>123456</password>
+	</user>
+	<user id="003">
+		<name>jacky</name>
+		<password>123456</password>
+	</user>
+</user-list>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/lucene_3.0_lib"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="F:/JAVA学习资料/就业班/day65_Lucence_day01___郑楚锋/索引库查看工具/lukeall-1.0.0.jar"/>
+	<classpathentry kind="lib" path="F:/JAVA学习资料/就业班/day65_Lucence_day01___郑楚锋/Lucene3.0_lib/IKAnalyzer3.2.8.jar"/>
+	<classpathentry kind="lib" path="F:/JAVA学习资料/就业班/day65_Lucence_day01___郑楚锋/Lucene3.0_lib/lucene-core-3.0.0.jar"/>
+	<classpathentry kind="lib" path="F:/JAVA学习资料/就业班/day65_Lucence_day01___郑楚锋/Lucene3.0_lib/lucene-highlighter-3.0.0.jar"/>
+	<classpathentry kind="lib" path="F:/JAVA学习资料/就业班/day65_Lucence_day01___郑楚锋/Lucene3.0_lib/lucene-memory-3.0.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

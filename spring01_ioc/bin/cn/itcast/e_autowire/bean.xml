@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd" 
+        default-autowire="byType">
+	
+	<!-- 配置： 需要创建的对象、对象依赖关系处理 -->
+	
+	<!-- 方式4：自动装配 (了解) -->
+	<!-- 
+		a. default-autowire="byType"  配置到全局
+			当前所有的bean都采用”根据类型自动装配“
+		b. 配置到bean节点
+			autowire="byName"  根据名称自动装配， 会去容器找指定名称的对象，注入到set方法的参数中！
+			autowire="byType"  根据类型自动装配, 要确保改类型对应的对象在IOC容器中唯一，否则报错！
+			
+		总结：
+			简化配置，但是维护麻烦！
+	 -->
+	<bean id="userDao" class="cn.itcast.e_autowire.UserDao"></bean>
+	<bean id="userService" class="cn.itcast.e_autowire.UserService"></bean>
+	<bean id="userAction" class="cn.itcast.e_autowire.UserAction"></bean>
+
+</beans>      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

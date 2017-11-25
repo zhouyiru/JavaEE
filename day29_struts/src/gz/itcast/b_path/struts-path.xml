@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+		
+	<package name="path" extends="struts-default" namespace="/path">
+			<!-- 一个业务方法(Action对象中的一个方法)使用一个action配置 。弊端： 需要管理更多配置信息-->
+			<!-- 
+			<action name="login" class="gz.itcast.b_path.UserAction" method="login">
+				<result name="success">/login.jsp</result>
+			</action>
+		
+			<action name="register" class="gz.itcast.b_path.UserAction" method="register">
+				<result name="success">/login.jsp</result>
+			</action> 
+			-->
+			
+			<!-- 一个模块（Action对象）使用一个action配置 -->
+			<!-- * (星号) :表示路径的通配符。   使用通配符的内容：   {1}  （表示获取第一个通配符的实际内容）  
+					好处： 大大地减少action的配置
+			-->
+			<!-- 
+			<action name="user_*" class="gz.itcast.b_path.UserAction" method="{1}">
+				<result name="{1}">/{1}.jsp</result>
+			</action>
+			 -->
+			 
+			 <!-- 多个模块使用一个action配置
+			 约定前提：  第一个*代表模块，第二个代表方法
+			 		User_login
+			  -->
+			 <action name="*_*" class="gz.itcast.b_path.{1}Action" method="{2}">
+			 	<result name="{2}">/{1}/{2}.jsp</result>
+			 </action>
+			 
+			
+	</package>
+
+</struts>

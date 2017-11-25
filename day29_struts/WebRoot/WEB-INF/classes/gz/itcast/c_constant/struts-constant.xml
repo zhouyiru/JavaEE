@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+		
+	<package name="cons" extends="struts-default" namespace="/cons">
+			 <!-- 全局视图配置: 把该包下的所有action共用的视图都机集中在这里写 -->
+			<global-results>
+				<result name="success">/login.jsp</result>
+			</global-results>
+	
+			<action name="user_*" class="gz.itcast.c_constant.UserAction" method="{1}">
+				<!-- 局部的视图会覆盖全局的视图 -->
+				<result name="success">/register.jsp</result>
+			</action>
+			
+			 
+			<action name="book_*" class="gz.itcast.c_constant.BookAction" method="{1}">
+			</action>
+			
+			<!-- struts2的动态方法调用： struts2提供的一种访问action的方法 
+				访问action的路径规则：  user!login
+						    action的名称！action的方法 
+			-->
+			<!-- 
+			<action name="user" class="gz.itcast.c_constant.UserAction">
+				<result name="success">/login.jsp</result>
+			</action>
+			 -->
+			 
+			 <!-- 默认配置 
+			 name: 必填项
+			 class: 可选项 。默认配置：  ActionSupport类   该类继承自struts-default （<default-class-ref class="com.opensymphony.xwork2.ActionSupport" />）
+			 method: 可选。默认配置
+			    result:
+			    	name: 可选。默认配置： success
+			    	type: 可选。默认配置： dispatcher
+			 -->
+			 <!-- 全部使用默认配置的action的作用 ：专门用于转发到WEB-INF下的页面 -->
+			 <action name="book">
+			 	<result>/WEB-INF/jsp/login.jsp</result>
+			 </action>
+			
+			
+	</package>
+
+</struts>

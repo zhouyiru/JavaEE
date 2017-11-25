@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<!-- 配置： 需要创建的对象、对象依赖关系处理 -->
+	
+	<!-- 方式1：通过set方法注入，这种方式最常用！ 
+	<bean id="userdao" class="cn.itcast.d_di2.UserDao"></bean>
+	<bean id="userService" class="cn.itcast.d_di2.UserService">
+		<property name="userDao" ref="userdao"></property>
+	</bean>
+	<bean id="userAction" class="cn.itcast.d_di2.UserAction" scope="prototype">
+		<property name="userService" ref="userService"></property>
+	</bean>
+	
+	 -->
+	
+	<!-- 方式2： 内部bean -->
+	<!-- 总结： 当创建的对象，不被容器其他地方引用的时候，可以这样写！ 这样写不通用，内部对象只能用一次 -->
+	<!-- 这里，action如果是单例，内部bean默认就是单例;  action如果是多例，内部bean就是多例 -->
+	<bean id="userAction2" class="cn.itcast.d_di2.UserAction" scope="prototype">
+		<property name="userService">
+			<bean class="cn.itcast.d_di2.UserService">
+				<property name="userDao">
+					<bean class="cn.itcast.d_di2.UserDao"></bean>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<!-- 方式3： p名称空间，给属性注入值 
+	<bean id="user" class="cn.itcast.c_di.User">
+		<property name="id" value="100"></property>
+	</bean>
+	<bean id="str" class="java.lang.String">
+		<constructor-arg value="Jacky"></constructor-arg>
+	</bean>
+	<bean id="user" class="cn.itcast.c_di.User" p:id="1000" p:name-ref="str"></bean>
+	-->
+	<bean id="userDao" class="cn.itcast.d_di2.UserDao"></bean>
+	<bean id="userService" class="cn.itcast.d_di2.UserService" p:userDao-ref="userDao"></bean>
+	<bean id="userAction" class="cn.itcast.d_di2.UserAction" p:userService-ref="userService"></bean>
+	
+</beans>      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!--  导入外部的dtd文件 -->
+<!DOCTYPE note SYSTEM "note.dtd">
+<note>
+  <to>dfdf<abc>dss</abc></to>
+  <from>Jani</from>
+    <from>Jani</from>
+  <heading>Reminder</heading>
+  <body id="d1">Don't forget mee this weekend</body>
+   <body id="d1">Don't forget mee this weekend</body>
+</note>
