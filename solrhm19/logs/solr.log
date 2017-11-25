@@ -1,0 +1,831 @@
+DEBUG - 2015-12-28 15:29:38.648; org.apache.solr.client.solrj.impl.HttpClientUtil; Creating new http client, config:maxConnections=128&maxConnectionsPerHost=32&followRedirects=false
+DEBUG - 2015-12-28 15:29:38.917; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection request: [route: {}->http://localhost:8080][total kept alive: 0; route allocated: 0 of 32; total allocated: 0 of 128]
+DEBUG - 2015-12-28 15:29:38.928; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection leased: [id: 0][route: {}->http://localhost:8080][total kept alive: 0; route allocated: 1 of 32; total allocated: 1 of 128]
+DEBUG - 2015-12-28 15:29:38.937; org.apache.http.impl.conn.DefaultClientConnectionOperator; Connecting to localhost:8080
+DEBUG - 2015-12-28 15:29:38.969; org.apache.http.client.protocol.RequestAddCookies; CookieSpec selected: best-match
+DEBUG - 2015-12-28 15:29:38.981; org.apache.http.client.protocol.RequestAuthCache; Auth cache not set in the context
+DEBUG - 2015-12-28 15:29:38.982; org.apache.http.client.protocol.RequestTargetAuthentication; Target auth state: UNCHALLENGED
+DEBUG - 2015-12-28 15:29:38.983; org.apache.http.client.protocol.RequestProxyAuthentication; Proxy auth state: UNCHALLENGED
+DEBUG - 2015-12-28 15:29:38.983; org.apache.http.impl.client.DefaultRequestDirector; Attempt 1 to execute request
+DEBUG - 2015-12-28 15:29:38.984; org.apache.http.impl.conn.DefaultClientConnection; Sending request: POST /solr/update?wt=javabin&version=2 HTTP/1.1
+DEBUG - 2015-12-28 15:29:38.985; org.apache.http.impl.conn.Wire;  >> "POST /solr/update?wt=javabin&version=2 HTTP/1.1[\r][\n]"
+DEBUG - 2015-12-28 15:29:38.987; org.apache.http.impl.conn.Wire;  >> "User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrServer] 1.0[\r][\n]"
+DEBUG - 2015-12-28 15:29:38.987; org.apache.http.impl.conn.Wire;  >> "Transfer-Encoding: chunked[\r][\n]"
+DEBUG - 2015-12-28 15:29:38.987; org.apache.http.impl.conn.Wire;  >> "Content-Type: application/xml; charset=UTF-8[\r][\n]"
+DEBUG - 2015-12-28 15:29:38.988; org.apache.http.impl.conn.Wire;  >> "Host: localhost:8080[\r][\n]"
+DEBUG - 2015-12-28 15:29:38.988; org.apache.http.impl.conn.Wire;  >> "Connection: Keep-Alive[\r][\n]"
+DEBUG - 2015-12-28 15:29:38.988; org.apache.http.impl.conn.Wire;  >> "[\r][\n]"
+DEBUG - 2015-12-28 15:29:38.989; org.apache.http.impl.conn.DefaultClientConnection; >> POST /solr/update?wt=javabin&version=2 HTTP/1.1
+DEBUG - 2015-12-28 15:29:38.989; org.apache.http.impl.conn.DefaultClientConnection; >> User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrServer] 1.0
+DEBUG - 2015-12-28 15:29:38.989; org.apache.http.impl.conn.DefaultClientConnection; >> Transfer-Encoding: chunked
+DEBUG - 2015-12-28 15:29:38.989; org.apache.http.impl.conn.DefaultClientConnection; >> Content-Type: application/xml; charset=UTF-8
+DEBUG - 2015-12-28 15:29:38.989; org.apache.http.impl.conn.DefaultClientConnection; >> Host: localhost:8080
+DEBUG - 2015-12-28 15:29:38.989; org.apache.http.impl.conn.DefaultClientConnection; >> Connection: Keep-Alive
+DEBUG - 2015-12-28 15:29:38.990; org.apache.http.impl.conn.Wire;  >> "63[\r][\n]"
+DEBUG - 2015-12-28 15:29:38.990; org.apache.http.impl.conn.Wire;  >> "<add><doc boost="1.0"><field name="id">c001</field><field name="name">solr test</field></doc></add>"
+DEBUG - 2015-12-28 15:29:38.990; org.apache.http.impl.conn.Wire;  >> "[\r][\n]"
+DEBUG - 2015-12-28 15:29:38.990; org.apache.http.impl.conn.Wire;  >> "0[\r][\n]"
+DEBUG - 2015-12-28 15:29:38.991; org.apache.http.impl.conn.Wire;  >> "[\r][\n]"
+DEBUG - 2015-12-28 15:29:38.998; org.apache.http.impl.conn.Wire;  << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG - 2015-12-28 15:29:39.003; org.apache.http.impl.conn.Wire;  << "Server: Apache-Coyote/1.1[\r][\n]"
+DEBUG - 2015-12-28 15:29:39.004; org.apache.http.impl.conn.Wire;  << "Content-Type: application/octet-stream[\r][\n]"
+DEBUG - 2015-12-28 15:29:39.005; org.apache.http.impl.conn.Wire;  << "Content-Length: 40[\r][\n]"
+DEBUG - 2015-12-28 15:29:39.006; org.apache.http.impl.conn.Wire;  << "Date: Mon, 28 Dec 2015 07:29:38 GMT[\r][\n]"
+DEBUG - 2015-12-28 15:29:39.006; org.apache.http.impl.conn.Wire;  << "[\r][\n]"
+DEBUG - 2015-12-28 15:29:39.009; org.apache.http.impl.conn.DefaultClientConnection; Receiving response: HTTP/1.1 200 OK
+DEBUG - 2015-12-28 15:29:39.009; org.apache.http.impl.conn.DefaultClientConnection; << HTTP/1.1 200 OK
+DEBUG - 2015-12-28 15:29:39.009; org.apache.http.impl.conn.DefaultClientConnection; << Server: Apache-Coyote/1.1
+DEBUG - 2015-12-28 15:29:39.010; org.apache.http.impl.conn.DefaultClientConnection; << Content-Type: application/octet-stream
+DEBUG - 2015-12-28 15:29:39.010; org.apache.http.impl.conn.DefaultClientConnection; << Content-Length: 40
+DEBUG - 2015-12-28 15:29:39.010; org.apache.http.impl.conn.DefaultClientConnection; << Date: Mon, 28 Dec 2015 07:29:38 GMT
+DEBUG - 2015-12-28 15:29:39.013; org.apache.http.impl.client.DefaultRequestDirector; Connection can be kept alive indefinitely
+DEBUG - 2015-12-28 15:29:39.027; org.apache.http.impl.conn.Wire;  << "[0x2][0xa1][0xe0].responseHeader[0xa2][0xe0]&status[0x6][0x0][0x0][0x0][0x0][0xe0]%QTimeB"
+DEBUG - 2015-12-28 15:29:39.030; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection [id: 0][route: {}->http://localhost:8080] can be kept alive indefinitely
+DEBUG - 2015-12-28 15:29:39.030; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection released: [id: 0][route: {}->http://localhost:8080][total kept alive: 1; route allocated: 1 of 32; total allocated: 1 of 128]
+DEBUG - 2015-12-28 15:29:39.034; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection request: [route: {}->http://localhost:8080][total kept alive: 1; route allocated: 1 of 32; total allocated: 1 of 128]
+DEBUG - 2015-12-28 15:29:39.035; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection leased: [id: 0][route: {}->http://localhost:8080][total kept alive: 0; route allocated: 1 of 32; total allocated: 1 of 128]
+DEBUG - 2015-12-28 15:29:39.035; org.apache.http.impl.client.DefaultRequestDirector; Stale connection check
+DEBUG - 2015-12-28 15:29:39.036; org.apache.http.client.protocol.RequestAddCookies; CookieSpec selected: best-match
+DEBUG - 2015-12-28 15:29:39.037; org.apache.http.client.protocol.RequestAuthCache; Auth cache not set in the context
+DEBUG - 2015-12-28 15:29:39.037; org.apache.http.client.protocol.RequestTargetAuthentication; Target auth state: UNCHALLENGED
+DEBUG - 2015-12-28 15:29:39.037; org.apache.http.client.protocol.RequestProxyAuthentication; Proxy auth state: UNCHALLENGED
+DEBUG - 2015-12-28 15:29:39.037; org.apache.http.impl.client.DefaultRequestDirector; Attempt 1 to execute request
+DEBUG - 2015-12-28 15:29:39.037; org.apache.http.impl.conn.DefaultClientConnection; Sending request: POST /solr/update HTTP/1.1
+DEBUG - 2015-12-28 15:29:39.037; org.apache.http.impl.conn.Wire;  >> "POST /solr/update HTTP/1.1[\r][\n]"
+DEBUG - 2015-12-28 15:29:39.037; org.apache.http.impl.conn.Wire;  >> "Content-Type: application/x-www-form-urlencoded; charset=UTF-8[\r][\n]"
+DEBUG - 2015-12-28 15:29:39.038; org.apache.http.impl.conn.Wire;  >> "User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrServer] 1.0[\r][\n]"
+DEBUG - 2015-12-28 15:29:39.038; org.apache.http.impl.conn.Wire;  >> "Content-Length: 67[\r][\n]"
+DEBUG - 2015-12-28 15:29:39.038; org.apache.http.impl.conn.Wire;  >> "Host: localhost:8080[\r][\n]"
+DEBUG - 2015-12-28 15:29:39.038; org.apache.http.impl.conn.Wire;  >> "Connection: Keep-Alive[\r][\n]"
+DEBUG - 2015-12-28 15:29:39.038; org.apache.http.impl.conn.Wire;  >> "[\r][\n]"
+DEBUG - 2015-12-28 15:29:39.039; org.apache.http.impl.conn.DefaultClientConnection; >> POST /solr/update HTTP/1.1
+DEBUG - 2015-12-28 15:29:39.039; org.apache.http.impl.conn.DefaultClientConnection; >> Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+DEBUG - 2015-12-28 15:29:39.039; org.apache.http.impl.conn.DefaultClientConnection; >> User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrServer] 1.0
+DEBUG - 2015-12-28 15:29:39.039; org.apache.http.impl.conn.DefaultClientConnection; >> Content-Length: 67
+DEBUG - 2015-12-28 15:29:39.039; org.apache.http.impl.conn.DefaultClientConnection; >> Host: localhost:8080
+DEBUG - 2015-12-28 15:29:39.039; org.apache.http.impl.conn.DefaultClientConnection; >> Connection: Keep-Alive
+DEBUG - 2015-12-28 15:29:39.040; org.apache.http.impl.conn.Wire;  >> "commit=true&softCommit=false&waitSearcher=true&wt=javabin&version=2"
+DEBUG - 2015-12-28 15:29:39.250; org.apache.http.impl.conn.Wire;  << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG - 2015-12-28 15:29:39.251; org.apache.http.impl.conn.Wire;  << "Server: Apache-Coyote/1.1[\r][\n]"
+DEBUG - 2015-12-28 15:29:39.251; org.apache.http.impl.conn.Wire;  << "Content-Type: application/octet-stream[\r][\n]"
+DEBUG - 2015-12-28 15:29:39.251; org.apache.http.impl.conn.Wire;  << "Content-Length: 41[\r][\n]"
+DEBUG - 2015-12-28 15:29:39.251; org.apache.http.impl.conn.Wire;  << "Date: Mon, 28 Dec 2015 07:29:38 GMT[\r][\n]"
+DEBUG - 2015-12-28 15:29:39.251; org.apache.http.impl.conn.Wire;  << "[\r][\n]"
+DEBUG - 2015-12-28 15:29:39.251; org.apache.http.impl.conn.DefaultClientConnection; Receiving response: HTTP/1.1 200 OK
+DEBUG - 2015-12-28 15:29:39.251; org.apache.http.impl.conn.DefaultClientConnection; << HTTP/1.1 200 OK
+DEBUG - 2015-12-28 15:29:39.251; org.apache.http.impl.conn.DefaultClientConnection; << Server: Apache-Coyote/1.1
+DEBUG - 2015-12-28 15:29:39.252; org.apache.http.impl.conn.DefaultClientConnection; << Content-Type: application/octet-stream
+DEBUG - 2015-12-28 15:29:39.252; org.apache.http.impl.conn.DefaultClientConnection; << Content-Length: 41
+DEBUG - 2015-12-28 15:29:39.252; org.apache.http.impl.conn.DefaultClientConnection; << Date: Mon, 28 Dec 2015 07:29:38 GMT
+DEBUG - 2015-12-28 15:29:39.252; org.apache.http.impl.client.DefaultRequestDirector; Connection can be kept alive indefinitely
+DEBUG - 2015-12-28 15:29:39.252; org.apache.http.impl.conn.Wire;  << "[0x2][0xa1][0xe0].responseHeader[0xa2][0xe0]&status[0x6][0x0][0x0][0x0][0x0][0xe0]%QTime_[0xc]"
+DEBUG - 2015-12-28 15:29:39.252; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection [id: 0][route: {}->http://localhost:8080] can be kept alive indefinitely
+DEBUG - 2015-12-28 15:29:39.252; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection released: [id: 0][route: {}->http://localhost:8080][total kept alive: 1; route allocated: 1 of 32; total allocated: 1 of 128]
+DEBUG - 2015-12-28 15:30:36.738; org.apache.solr.client.solrj.impl.HttpClientUtil; Creating new http client, config:maxConnections=128&maxConnectionsPerHost=32&followRedirects=false
+DEBUG - 2015-12-28 15:30:37.011; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection request: [route: {}->http://localhost:8080][total kept alive: 0; route allocated: 0 of 32; total allocated: 0 of 128]
+DEBUG - 2015-12-28 15:30:37.020; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection leased: [id: 0][route: {}->http://localhost:8080][total kept alive: 0; route allocated: 1 of 32; total allocated: 1 of 128]
+DEBUG - 2015-12-28 15:30:37.025; org.apache.http.impl.conn.DefaultClientConnectionOperator; Connecting to localhost:8080
+DEBUG - 2015-12-28 15:30:37.052; org.apache.http.client.protocol.RequestAddCookies; CookieSpec selected: best-match
+DEBUG - 2015-12-28 15:30:37.068; org.apache.http.client.protocol.RequestAuthCache; Auth cache not set in the context
+DEBUG - 2015-12-28 15:30:37.068; org.apache.http.client.protocol.RequestTargetAuthentication; Target auth state: UNCHALLENGED
+DEBUG - 2015-12-28 15:30:37.069; org.apache.http.client.protocol.RequestProxyAuthentication; Proxy auth state: UNCHALLENGED
+DEBUG - 2015-12-28 15:30:37.069; org.apache.http.impl.client.DefaultRequestDirector; Attempt 1 to execute request
+DEBUG - 2015-12-28 15:30:37.069; org.apache.http.impl.conn.DefaultClientConnection; Sending request: POST /solr/update?wt=javabin&version=2 HTTP/1.1
+DEBUG - 2015-12-28 15:30:37.070; org.apache.http.impl.conn.Wire;  >> "POST /solr/update?wt=javabin&version=2 HTTP/1.1[\r][\n]"
+DEBUG - 2015-12-28 15:30:37.071; org.apache.http.impl.conn.Wire;  >> "User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrServer] 1.0[\r][\n]"
+DEBUG - 2015-12-28 15:30:37.071; org.apache.http.impl.conn.Wire;  >> "Transfer-Encoding: chunked[\r][\n]"
+DEBUG - 2015-12-28 15:30:37.071; org.apache.http.impl.conn.Wire;  >> "Content-Type: application/xml; charset=UTF-8[\r][\n]"
+DEBUG - 2015-12-28 15:30:37.071; org.apache.http.impl.conn.Wire;  >> "Host: localhost:8080[\r][\n]"
+DEBUG - 2015-12-28 15:30:37.072; org.apache.http.impl.conn.Wire;  >> "Connection: Keep-Alive[\r][\n]"
+DEBUG - 2015-12-28 15:30:37.072; org.apache.http.impl.conn.Wire;  >> "[\r][\n]"
+DEBUG - 2015-12-28 15:30:37.072; org.apache.http.impl.conn.DefaultClientConnection; >> POST /solr/update?wt=javabin&version=2 HTTP/1.1
+DEBUG - 2015-12-28 15:30:37.073; org.apache.http.impl.conn.DefaultClientConnection; >> User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrServer] 1.0
+DEBUG - 2015-12-28 15:30:37.073; org.apache.http.impl.conn.DefaultClientConnection; >> Transfer-Encoding: chunked
+DEBUG - 2015-12-28 15:30:37.073; org.apache.http.impl.conn.DefaultClientConnection; >> Content-Type: application/xml; charset=UTF-8
+DEBUG - 2015-12-28 15:30:37.073; org.apache.http.impl.conn.DefaultClientConnection; >> Host: localhost:8080
+DEBUG - 2015-12-28 15:30:37.073; org.apache.http.impl.conn.DefaultClientConnection; >> Connection: Keep-Alive
+DEBUG - 2015-12-28 15:30:37.074; org.apache.http.impl.conn.Wire;  >> "66[\r][\n]"
+DEBUG - 2015-12-28 15:30:37.074; org.apache.http.impl.conn.Wire;  >> "<add><doc boost="1.0"><field name="id">c001</field><field name="name">solr test111</field></doc></add>"
+DEBUG - 2015-12-28 15:30:37.074; org.apache.http.impl.conn.Wire;  >> "[\r][\n]"
+DEBUG - 2015-12-28 15:30:37.074; org.apache.http.impl.conn.Wire;  >> "0[\r][\n]"
+DEBUG - 2015-12-28 15:30:37.074; org.apache.http.impl.conn.Wire;  >> "[\r][\n]"
+DEBUG - 2015-12-28 15:30:37.078; org.apache.http.impl.conn.Wire;  << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG - 2015-12-28 15:30:37.079; org.apache.http.impl.conn.Wire;  << "Server: Apache-Coyote/1.1[\r][\n]"
+DEBUG - 2015-12-28 15:30:37.080; org.apache.http.impl.conn.Wire;  << "Content-Type: application/octet-stream[\r][\n]"
+DEBUG - 2015-12-28 15:30:37.080; org.apache.http.impl.conn.Wire;  << "Content-Length: 40[\r][\n]"
+DEBUG - 2015-12-28 15:30:37.080; org.apache.http.impl.conn.Wire;  << "Date: Mon, 28 Dec 2015 07:30:37 GMT[\r][\n]"
+DEBUG - 2015-12-28 15:30:37.080; org.apache.http.impl.conn.Wire;  << "[\r][\n]"
+DEBUG - 2015-12-28 15:30:37.081; org.apache.http.impl.conn.DefaultClientConnection; Receiving response: HTTP/1.1 200 OK
+DEBUG - 2015-12-28 15:30:37.081; org.apache.http.impl.conn.DefaultClientConnection; << HTTP/1.1 200 OK
+DEBUG - 2015-12-28 15:30:37.081; org.apache.http.impl.conn.DefaultClientConnection; << Server: Apache-Coyote/1.1
+DEBUG - 2015-12-28 15:30:37.081; org.apache.http.impl.conn.DefaultClientConnection; << Content-Type: application/octet-stream
+DEBUG - 2015-12-28 15:30:37.081; org.apache.http.impl.conn.DefaultClientConnection; << Content-Length: 40
+DEBUG - 2015-12-28 15:30:37.081; org.apache.http.impl.conn.DefaultClientConnection; << Date: Mon, 28 Dec 2015 07:30:37 GMT
+DEBUG - 2015-12-28 15:30:37.083; org.apache.http.impl.client.DefaultRequestDirector; Connection can be kept alive indefinitely
+DEBUG - 2015-12-28 15:30:37.097; org.apache.http.impl.conn.Wire;  << "[0x2][0xa1][0xe0].responseHeader[0xa2][0xe0]&status[0x6][0x0][0x0][0x0][0x0][0xe0]%QTimeB"
+DEBUG - 2015-12-28 15:30:37.098; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection [id: 0][route: {}->http://localhost:8080] can be kept alive indefinitely
+DEBUG - 2015-12-28 15:30:37.098; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection released: [id: 0][route: {}->http://localhost:8080][total kept alive: 1; route allocated: 1 of 32; total allocated: 1 of 128]
+DEBUG - 2015-12-28 15:30:37.100; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection request: [route: {}->http://localhost:8080][total kept alive: 1; route allocated: 1 of 32; total allocated: 1 of 128]
+DEBUG - 2015-12-28 15:30:37.100; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection leased: [id: 0][route: {}->http://localhost:8080][total kept alive: 0; route allocated: 1 of 32; total allocated: 1 of 128]
+DEBUG - 2015-12-28 15:30:37.100; org.apache.http.impl.client.DefaultRequestDirector; Stale connection check
+DEBUG - 2015-12-28 15:30:37.101; org.apache.http.client.protocol.RequestAddCookies; CookieSpec selected: best-match
+DEBUG - 2015-12-28 15:30:37.101; org.apache.http.client.protocol.RequestAuthCache; Auth cache not set in the context
+DEBUG - 2015-12-28 15:30:37.101; org.apache.http.client.protocol.RequestTargetAuthentication; Target auth state: UNCHALLENGED
+DEBUG - 2015-12-28 15:30:37.101; org.apache.http.client.protocol.RequestProxyAuthentication; Proxy auth state: UNCHALLENGED
+DEBUG - 2015-12-28 15:30:37.101; org.apache.http.impl.client.DefaultRequestDirector; Attempt 1 to execute request
+DEBUG - 2015-12-28 15:30:37.101; org.apache.http.impl.conn.DefaultClientConnection; Sending request: POST /solr/update HTTP/1.1
+DEBUG - 2015-12-28 15:30:37.101; org.apache.http.impl.conn.Wire;  >> "POST /solr/update HTTP/1.1[\r][\n]"
+DEBUG - 2015-12-28 15:30:37.102; org.apache.http.impl.conn.Wire;  >> "Content-Type: application/x-www-form-urlencoded; charset=UTF-8[\r][\n]"
+DEBUG - 2015-12-28 15:30:37.102; org.apache.http.impl.conn.Wire;  >> "User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrServer] 1.0[\r][\n]"
+DEBUG - 2015-12-28 15:30:37.102; org.apache.http.impl.conn.Wire;  >> "Content-Length: 67[\r][\n]"
+DEBUG - 2015-12-28 15:30:37.102; org.apache.http.impl.conn.Wire;  >> "Host: localhost:8080[\r][\n]"
+DEBUG - 2015-12-28 15:30:37.102; org.apache.http.impl.conn.Wire;  >> "Connection: Keep-Alive[\r][\n]"
+DEBUG - 2015-12-28 15:30:37.102; org.apache.http.impl.conn.Wire;  >> "[\r][\n]"
+DEBUG - 2015-12-28 15:30:37.102; org.apache.http.impl.conn.DefaultClientConnection; >> POST /solr/update HTTP/1.1
+DEBUG - 2015-12-28 15:30:37.103; org.apache.http.impl.conn.DefaultClientConnection; >> Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+DEBUG - 2015-12-28 15:30:37.103; org.apache.http.impl.conn.DefaultClientConnection; >> User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrServer] 1.0
+DEBUG - 2015-12-28 15:30:37.103; org.apache.http.impl.conn.DefaultClientConnection; >> Content-Length: 67
+DEBUG - 2015-12-28 15:30:37.103; org.apache.http.impl.conn.DefaultClientConnection; >> Host: localhost:8080
+DEBUG - 2015-12-28 15:30:37.103; org.apache.http.impl.conn.DefaultClientConnection; >> Connection: Keep-Alive
+DEBUG - 2015-12-28 15:30:37.103; org.apache.http.impl.conn.Wire;  >> "commit=true&softCommit=false&waitSearcher=true&wt=javabin&version=2"
+DEBUG - 2015-12-28 15:30:37.267; org.apache.http.impl.conn.Wire;  << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG - 2015-12-28 15:30:37.267; org.apache.http.impl.conn.Wire;  << "Server: Apache-Coyote/1.1[\r][\n]"
+DEBUG - 2015-12-28 15:30:37.267; org.apache.http.impl.conn.Wire;  << "Content-Type: application/octet-stream[\r][\n]"
+DEBUG - 2015-12-28 15:30:37.267; org.apache.http.impl.conn.Wire;  << "Content-Length: 41[\r][\n]"
+DEBUG - 2015-12-28 15:30:37.267; org.apache.http.impl.conn.Wire;  << "Date: Mon, 28 Dec 2015 07:30:37 GMT[\r][\n]"
+DEBUG - 2015-12-28 15:30:37.267; org.apache.http.impl.conn.Wire;  << "[\r][\n]"
+DEBUG - 2015-12-28 15:30:37.268; org.apache.http.impl.conn.DefaultClientConnection; Receiving response: HTTP/1.1 200 OK
+DEBUG - 2015-12-28 15:30:37.268; org.apache.http.impl.conn.DefaultClientConnection; << HTTP/1.1 200 OK
+DEBUG - 2015-12-28 15:30:37.268; org.apache.http.impl.conn.DefaultClientConnection; << Server: Apache-Coyote/1.1
+DEBUG - 2015-12-28 15:30:37.268; org.apache.http.impl.conn.DefaultClientConnection; << Content-Type: application/octet-stream
+DEBUG - 2015-12-28 15:30:37.268; org.apache.http.impl.conn.DefaultClientConnection; << Content-Length: 41
+DEBUG - 2015-12-28 15:30:37.268; org.apache.http.impl.conn.DefaultClientConnection; << Date: Mon, 28 Dec 2015 07:30:37 GMT
+DEBUG - 2015-12-28 15:30:37.268; org.apache.http.impl.client.DefaultRequestDirector; Connection can be kept alive indefinitely
+DEBUG - 2015-12-28 15:30:37.269; org.apache.http.impl.conn.Wire;  << "[0x2][0xa1][0xe0].responseHeader[0xa2][0xe0]&status[0x6][0x0][0x0][0x0][0x0][0xe0]%QTimeP[\n]"
+DEBUG - 2015-12-28 15:30:37.269; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection [id: 0][route: {}->http://localhost:8080] can be kept alive indefinitely
+DEBUG - 2015-12-28 15:30:37.269; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection released: [id: 0][route: {}->http://localhost:8080][total kept alive: 1; route allocated: 1 of 32; total allocated: 1 of 128]
+DEBUG - 2015-12-28 15:33:43.786; org.apache.solr.client.solrj.impl.HttpClientUtil; Creating new http client, config:maxConnections=128&maxConnectionsPerHost=32&followRedirects=false
+DEBUG - 2015-12-28 15:33:44.052; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection request: [route: {}->http://localhost:8080][total kept alive: 0; route allocated: 0 of 32; total allocated: 0 of 128]
+DEBUG - 2015-12-28 15:33:44.061; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection leased: [id: 0][route: {}->http://localhost:8080][total kept alive: 0; route allocated: 1 of 32; total allocated: 1 of 128]
+DEBUG - 2015-12-28 15:33:44.067; org.apache.http.impl.conn.DefaultClientConnectionOperator; Connecting to localhost:8080
+DEBUG - 2015-12-28 15:33:44.096; org.apache.http.client.protocol.RequestAddCookies; CookieSpec selected: best-match
+DEBUG - 2015-12-28 15:33:44.108; org.apache.http.client.protocol.RequestAuthCache; Auth cache not set in the context
+DEBUG - 2015-12-28 15:33:44.110; org.apache.http.client.protocol.RequestTargetAuthentication; Target auth state: UNCHALLENGED
+DEBUG - 2015-12-28 15:33:44.111; org.apache.http.client.protocol.RequestProxyAuthentication; Proxy auth state: UNCHALLENGED
+DEBUG - 2015-12-28 15:33:44.112; org.apache.http.impl.client.DefaultRequestDirector; Attempt 1 to execute request
+DEBUG - 2015-12-28 15:33:44.112; org.apache.http.impl.conn.DefaultClientConnection; Sending request: POST /solr/update?wt=javabin&version=2 HTTP/1.1
+DEBUG - 2015-12-28 15:33:44.113; org.apache.http.impl.conn.Wire;  >> "POST /solr/update?wt=javabin&version=2 HTTP/1.1[\r][\n]"
+DEBUG - 2015-12-28 15:33:44.115; org.apache.http.impl.conn.Wire;  >> "User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrServer] 1.0[\r][\n]"
+DEBUG - 2015-12-28 15:33:44.115; org.apache.http.impl.conn.Wire;  >> "Transfer-Encoding: chunked[\r][\n]"
+DEBUG - 2015-12-28 15:33:44.115; org.apache.http.impl.conn.Wire;  >> "Content-Type: application/xml; charset=UTF-8[\r][\n]"
+DEBUG - 2015-12-28 15:33:44.115; org.apache.http.impl.conn.Wire;  >> "Host: localhost:8080[\r][\n]"
+DEBUG - 2015-12-28 15:33:44.115; org.apache.http.impl.conn.Wire;  >> "Connection: Keep-Alive[\r][\n]"
+DEBUG - 2015-12-28 15:33:44.116; org.apache.http.impl.conn.Wire;  >> "[\r][\n]"
+DEBUG - 2015-12-28 15:33:44.117; org.apache.http.impl.conn.DefaultClientConnection; >> POST /solr/update?wt=javabin&version=2 HTTP/1.1
+DEBUG - 2015-12-28 15:33:44.117; org.apache.http.impl.conn.DefaultClientConnection; >> User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrServer] 1.0
+DEBUG - 2015-12-28 15:33:44.117; org.apache.http.impl.conn.DefaultClientConnection; >> Transfer-Encoding: chunked
+DEBUG - 2015-12-28 15:33:44.117; org.apache.http.impl.conn.DefaultClientConnection; >> Content-Type: application/xml; charset=UTF-8
+DEBUG - 2015-12-28 15:33:44.117; org.apache.http.impl.conn.DefaultClientConnection; >> Host: localhost:8080
+DEBUG - 2015-12-28 15:33:44.117; org.apache.http.impl.conn.DefaultClientConnection; >> Connection: Keep-Alive
+DEBUG - 2015-12-28 15:33:44.119; org.apache.http.impl.conn.Wire;  >> "1e[\r][\n]"
+DEBUG - 2015-12-28 15:33:44.119; org.apache.http.impl.conn.Wire;  >> "<delete><id>c001</id></delete>"
+DEBUG - 2015-12-28 15:33:44.119; org.apache.http.impl.conn.Wire;  >> "[\r][\n]"
+DEBUG - 2015-12-28 15:33:44.120; org.apache.http.impl.conn.Wire;  >> "0[\r][\n]"
+DEBUG - 2015-12-28 15:33:44.120; org.apache.http.impl.conn.Wire;  >> "[\r][\n]"
+DEBUG - 2015-12-28 15:33:44.125; org.apache.http.impl.conn.Wire;  << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG - 2015-12-28 15:33:44.128; org.apache.http.impl.conn.Wire;  << "Server: Apache-Coyote/1.1[\r][\n]"
+DEBUG - 2015-12-28 15:33:44.129; org.apache.http.impl.conn.Wire;  << "Content-Type: application/octet-stream[\r][\n]"
+DEBUG - 2015-12-28 15:33:44.129; org.apache.http.impl.conn.Wire;  << "Content-Length: 40[\r][\n]"
+DEBUG - 2015-12-28 15:33:44.129; org.apache.http.impl.conn.Wire;  << "Date: Mon, 28 Dec 2015 07:33:44 GMT[\r][\n]"
+DEBUG - 2015-12-28 15:33:44.129; org.apache.http.impl.conn.Wire;  << "[\r][\n]"
+DEBUG - 2015-12-28 15:33:44.130; org.apache.http.impl.conn.DefaultClientConnection; Receiving response: HTTP/1.1 200 OK
+DEBUG - 2015-12-28 15:33:44.131; org.apache.http.impl.conn.DefaultClientConnection; << HTTP/1.1 200 OK
+DEBUG - 2015-12-28 15:33:44.131; org.apache.http.impl.conn.DefaultClientConnection; << Server: Apache-Coyote/1.1
+DEBUG - 2015-12-28 15:33:44.131; org.apache.http.impl.conn.DefaultClientConnection; << Content-Type: application/octet-stream
+DEBUG - 2015-12-28 15:33:44.131; org.apache.http.impl.conn.DefaultClientConnection; << Content-Length: 40
+DEBUG - 2015-12-28 15:33:44.131; org.apache.http.impl.conn.DefaultClientConnection; << Date: Mon, 28 Dec 2015 07:33:44 GMT
+DEBUG - 2015-12-28 15:33:44.134; org.apache.http.impl.client.DefaultRequestDirector; Connection can be kept alive indefinitely
+DEBUG - 2015-12-28 15:33:44.156; org.apache.http.impl.conn.Wire;  << "[0x2][0xa1][0xe0].responseHeader[0xa2][0xe0]&status[0x6][0x0][0x0][0x0][0x0][0xe0]%QTimeB"
+DEBUG - 2015-12-28 15:33:44.158; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection [id: 0][route: {}->http://localhost:8080] can be kept alive indefinitely
+DEBUG - 2015-12-28 15:33:44.158; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection released: [id: 0][route: {}->http://localhost:8080][total kept alive: 1; route allocated: 1 of 32; total allocated: 1 of 128]
+DEBUG - 2015-12-28 15:33:44.161; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection request: [route: {}->http://localhost:8080][total kept alive: 1; route allocated: 1 of 32; total allocated: 1 of 128]
+DEBUG - 2015-12-28 15:33:44.161; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection leased: [id: 0][route: {}->http://localhost:8080][total kept alive: 0; route allocated: 1 of 32; total allocated: 1 of 128]
+DEBUG - 2015-12-28 15:33:44.161; org.apache.http.impl.client.DefaultRequestDirector; Stale connection check
+DEBUG - 2015-12-28 15:33:44.162; org.apache.http.client.protocol.RequestAddCookies; CookieSpec selected: best-match
+DEBUG - 2015-12-28 15:33:44.162; org.apache.http.client.protocol.RequestAuthCache; Auth cache not set in the context
+DEBUG - 2015-12-28 15:33:44.162; org.apache.http.client.protocol.RequestTargetAuthentication; Target auth state: UNCHALLENGED
+DEBUG - 2015-12-28 15:33:44.162; org.apache.http.client.protocol.RequestProxyAuthentication; Proxy auth state: UNCHALLENGED
+DEBUG - 2015-12-28 15:33:44.162; org.apache.http.impl.client.DefaultRequestDirector; Attempt 1 to execute request
+DEBUG - 2015-12-28 15:33:44.162; org.apache.http.impl.conn.DefaultClientConnection; Sending request: POST /solr/update HTTP/1.1
+DEBUG - 2015-12-28 15:33:44.163; org.apache.http.impl.conn.Wire;  >> "POST /solr/update HTTP/1.1[\r][\n]"
+DEBUG - 2015-12-28 15:33:44.163; org.apache.http.impl.conn.Wire;  >> "Content-Type: application/x-www-form-urlencoded; charset=UTF-8[\r][\n]"
+DEBUG - 2015-12-28 15:33:44.163; org.apache.http.impl.conn.Wire;  >> "User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrServer] 1.0[\r][\n]"
+DEBUG - 2015-12-28 15:33:44.163; org.apache.http.impl.conn.Wire;  >> "Content-Length: 67[\r][\n]"
+DEBUG - 2015-12-28 15:33:44.163; org.apache.http.impl.conn.Wire;  >> "Host: localhost:8080[\r][\n]"
+DEBUG - 2015-12-28 15:33:44.163; org.apache.http.impl.conn.Wire;  >> "Connection: Keep-Alive[\r][\n]"
+DEBUG - 2015-12-28 15:33:44.164; org.apache.http.impl.conn.Wire;  >> "[\r][\n]"
+DEBUG - 2015-12-28 15:33:44.164; org.apache.http.impl.conn.DefaultClientConnection; >> POST /solr/update HTTP/1.1
+DEBUG - 2015-12-28 15:33:44.164; org.apache.http.impl.conn.DefaultClientConnection; >> Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+DEBUG - 2015-12-28 15:33:44.164; org.apache.http.impl.conn.DefaultClientConnection; >> User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrServer] 1.0
+DEBUG - 2015-12-28 15:33:44.164; org.apache.http.impl.conn.DefaultClientConnection; >> Content-Length: 67
+DEBUG - 2015-12-28 15:33:44.164; org.apache.http.impl.conn.DefaultClientConnection; >> Host: localhost:8080
+DEBUG - 2015-12-28 15:33:44.164; org.apache.http.impl.conn.DefaultClientConnection; >> Connection: Keep-Alive
+DEBUG - 2015-12-28 15:33:44.165; org.apache.http.impl.conn.Wire;  >> "commit=true&softCommit=false&waitSearcher=true&wt=javabin&version=2"
+DEBUG - 2015-12-28 15:33:44.288; org.apache.http.impl.conn.Wire;  << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG - 2015-12-28 15:33:44.289; org.apache.http.impl.conn.Wire;  << "Server: Apache-Coyote/1.1[\r][\n]"
+DEBUG - 2015-12-28 15:33:44.289; org.apache.http.impl.conn.Wire;  << "Content-Type: application/octet-stream[\r][\n]"
+DEBUG - 2015-12-28 15:33:44.289; org.apache.http.impl.conn.Wire;  << "Content-Length: 41[\r][\n]"
+DEBUG - 2015-12-28 15:33:44.289; org.apache.http.impl.conn.Wire;  << "Date: Mon, 28 Dec 2015 07:33:44 GMT[\r][\n]"
+DEBUG - 2015-12-28 15:33:44.290; org.apache.http.impl.conn.Wire;  << "[\r][\n]"
+DEBUG - 2015-12-28 15:33:44.290; org.apache.http.impl.conn.DefaultClientConnection; Receiving response: HTTP/1.1 200 OK
+DEBUG - 2015-12-28 15:33:44.290; org.apache.http.impl.conn.DefaultClientConnection; << HTTP/1.1 200 OK
+DEBUG - 2015-12-28 15:33:44.290; org.apache.http.impl.conn.DefaultClientConnection; << Server: Apache-Coyote/1.1
+DEBUG - 2015-12-28 15:33:44.290; org.apache.http.impl.conn.DefaultClientConnection; << Content-Type: application/octet-stream
+DEBUG - 2015-12-28 15:33:44.290; org.apache.http.impl.conn.DefaultClientConnection; << Content-Length: 41
+DEBUG - 2015-12-28 15:33:44.290; org.apache.http.impl.conn.DefaultClientConnection; << Date: Mon, 28 Dec 2015 07:33:44 GMT
+DEBUG - 2015-12-28 15:33:44.291; org.apache.http.impl.client.DefaultRequestDirector; Connection can be kept alive indefinitely
+DEBUG - 2015-12-28 15:33:44.291; org.apache.http.impl.conn.Wire;  << "[0x2][0xa1][0xe0].responseHeader[0xa2][0xe0]&status[0x6][0x0][0x0][0x0][0x0][0xe0]%QTimeY[0x7]"
+DEBUG - 2015-12-28 15:33:44.291; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection [id: 0][route: {}->http://localhost:8080] can be kept alive indefinitely
+DEBUG - 2015-12-28 15:33:44.291; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection released: [id: 0][route: {}->http://localhost:8080][total kept alive: 1; route allocated: 1 of 32; total allocated: 1 of 128]
+DEBUG - 2015-12-28 15:34:40.492; org.apache.solr.client.solrj.impl.HttpClientUtil; Creating new http client, config:maxConnections=128&maxConnectionsPerHost=32&followRedirects=false
+DEBUG - 2015-12-28 15:34:40.753; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection request: [route: {}->http://localhost:8080][total kept alive: 0; route allocated: 0 of 32; total allocated: 0 of 128]
+DEBUG - 2015-12-28 15:34:40.762; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection leased: [id: 0][route: {}->http://localhost:8080][total kept alive: 0; route allocated: 1 of 32; total allocated: 1 of 128]
+DEBUG - 2015-12-28 15:34:40.768; org.apache.http.impl.conn.DefaultClientConnectionOperator; Connecting to localhost:8080
+DEBUG - 2015-12-28 15:34:40.796; org.apache.http.client.protocol.RequestAddCookies; CookieSpec selected: best-match
+DEBUG - 2015-12-28 15:34:40.810; org.apache.http.client.protocol.RequestAuthCache; Auth cache not set in the context
+DEBUG - 2015-12-28 15:34:40.812; org.apache.http.client.protocol.RequestTargetAuthentication; Target auth state: UNCHALLENGED
+DEBUG - 2015-12-28 15:34:40.813; org.apache.http.client.protocol.RequestProxyAuthentication; Proxy auth state: UNCHALLENGED
+DEBUG - 2015-12-28 15:34:40.813; org.apache.http.impl.client.DefaultRequestDirector; Attempt 1 to execute request
+DEBUG - 2015-12-28 15:34:40.813; org.apache.http.impl.conn.DefaultClientConnection; Sending request: POST /solr/update?wt=javabin&version=2 HTTP/1.1
+DEBUG - 2015-12-28 15:34:40.814; org.apache.http.impl.conn.Wire;  >> "POST /solr/update?wt=javabin&version=2 HTTP/1.1[\r][\n]"
+DEBUG - 2015-12-28 15:34:40.815; org.apache.http.impl.conn.Wire;  >> "User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrServer] 1.0[\r][\n]"
+DEBUG - 2015-12-28 15:34:40.815; org.apache.http.impl.conn.Wire;  >> "Transfer-Encoding: chunked[\r][\n]"
+DEBUG - 2015-12-28 15:34:40.815; org.apache.http.impl.conn.Wire;  >> "Content-Type: application/xml; charset=UTF-8[\r][\n]"
+DEBUG - 2015-12-28 15:34:40.816; org.apache.http.impl.conn.Wire;  >> "Host: localhost:8080[\r][\n]"
+DEBUG - 2015-12-28 15:34:40.816; org.apache.http.impl.conn.Wire;  >> "Connection: Keep-Alive[\r][\n]"
+DEBUG - 2015-12-28 15:34:40.816; org.apache.http.impl.conn.Wire;  >> "[\r][\n]"
+DEBUG - 2015-12-28 15:34:40.817; org.apache.http.impl.conn.DefaultClientConnection; >> POST /solr/update?wt=javabin&version=2 HTTP/1.1
+DEBUG - 2015-12-28 15:34:40.817; org.apache.http.impl.conn.DefaultClientConnection; >> User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrServer] 1.0
+DEBUG - 2015-12-28 15:34:40.817; org.apache.http.impl.conn.DefaultClientConnection; >> Transfer-Encoding: chunked
+DEBUG - 2015-12-28 15:34:40.817; org.apache.http.impl.conn.DefaultClientConnection; >> Content-Type: application/xml; charset=UTF-8
+DEBUG - 2015-12-28 15:34:40.817; org.apache.http.impl.conn.DefaultClientConnection; >> Host: localhost:8080
+DEBUG - 2015-12-28 15:34:40.817; org.apache.http.impl.conn.DefaultClientConnection; >> Connection: Keep-Alive
+DEBUG - 2015-12-28 15:34:40.818; org.apache.http.impl.conn.Wire;  >> "66[\r][\n]"
+DEBUG - 2015-12-28 15:34:40.818; org.apache.http.impl.conn.Wire;  >> "<add><doc boost="1.0"><field name="id">c001</field><field name="name">solr test111</field></doc></add>"
+DEBUG - 2015-12-28 15:34:40.818; org.apache.http.impl.conn.Wire;  >> "[\r][\n]"
+DEBUG - 2015-12-28 15:34:40.818; org.apache.http.impl.conn.Wire;  >> "0[\r][\n]"
+DEBUG - 2015-12-28 15:34:40.818; org.apache.http.impl.conn.Wire;  >> "[\r][\n]"
+DEBUG - 2015-12-28 15:34:40.823; org.apache.http.impl.conn.Wire;  << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG - 2015-12-28 15:34:40.824; org.apache.http.impl.conn.Wire;  << "Server: Apache-Coyote/1.1[\r][\n]"
+DEBUG - 2015-12-28 15:34:40.824; org.apache.http.impl.conn.Wire;  << "Content-Type: application/octet-stream[\r][\n]"
+DEBUG - 2015-12-28 15:34:40.824; org.apache.http.impl.conn.Wire;  << "Content-Length: 40[\r][\n]"
+DEBUG - 2015-12-28 15:34:40.825; org.apache.http.impl.conn.Wire;  << "Date: Mon, 28 Dec 2015 07:34:40 GMT[\r][\n]"
+DEBUG - 2015-12-28 15:34:40.825; org.apache.http.impl.conn.Wire;  << "[\r][\n]"
+DEBUG - 2015-12-28 15:34:40.825; org.apache.http.impl.conn.DefaultClientConnection; Receiving response: HTTP/1.1 200 OK
+DEBUG - 2015-12-28 15:34:40.825; org.apache.http.impl.conn.DefaultClientConnection; << HTTP/1.1 200 OK
+DEBUG - 2015-12-28 15:34:40.826; org.apache.http.impl.conn.DefaultClientConnection; << Server: Apache-Coyote/1.1
+DEBUG - 2015-12-28 15:34:40.826; org.apache.http.impl.conn.DefaultClientConnection; << Content-Type: application/octet-stream
+DEBUG - 2015-12-28 15:34:40.826; org.apache.http.impl.conn.DefaultClientConnection; << Content-Length: 40
+DEBUG - 2015-12-28 15:34:40.826; org.apache.http.impl.conn.DefaultClientConnection; << Date: Mon, 28 Dec 2015 07:34:40 GMT
+DEBUG - 2015-12-28 15:34:40.827; org.apache.http.impl.client.DefaultRequestDirector; Connection can be kept alive indefinitely
+DEBUG - 2015-12-28 15:34:40.838; org.apache.http.impl.conn.Wire;  << "[0x2][0xa1][0xe0].responseHeader[0xa2][0xe0]&status[0x6][0x0][0x0][0x0][0x0][0xe0]%QTimeA"
+DEBUG - 2015-12-28 15:34:40.839; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection [id: 0][route: {}->http://localhost:8080] can be kept alive indefinitely
+DEBUG - 2015-12-28 15:34:40.839; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection released: [id: 0][route: {}->http://localhost:8080][total kept alive: 1; route allocated: 1 of 32; total allocated: 1 of 128]
+DEBUG - 2015-12-28 15:34:40.841; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection request: [route: {}->http://localhost:8080][total kept alive: 1; route allocated: 1 of 32; total allocated: 1 of 128]
+DEBUG - 2015-12-28 15:34:40.841; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection leased: [id: 0][route: {}->http://localhost:8080][total kept alive: 0; route allocated: 1 of 32; total allocated: 1 of 128]
+DEBUG - 2015-12-28 15:34:40.841; org.apache.http.impl.client.DefaultRequestDirector; Stale connection check
+DEBUG - 2015-12-28 15:34:40.842; org.apache.http.client.protocol.RequestAddCookies; CookieSpec selected: best-match
+DEBUG - 2015-12-28 15:34:40.842; org.apache.http.client.protocol.RequestAuthCache; Auth cache not set in the context
+DEBUG - 2015-12-28 15:34:40.842; org.apache.http.client.protocol.RequestTargetAuthentication; Target auth state: UNCHALLENGED
+DEBUG - 2015-12-28 15:34:40.842; org.apache.http.client.protocol.RequestProxyAuthentication; Proxy auth state: UNCHALLENGED
+DEBUG - 2015-12-28 15:34:40.842; org.apache.http.impl.client.DefaultRequestDirector; Attempt 1 to execute request
+DEBUG - 2015-12-28 15:34:40.842; org.apache.http.impl.conn.DefaultClientConnection; Sending request: POST /solr/update HTTP/1.1
+DEBUG - 2015-12-28 15:34:40.843; org.apache.http.impl.conn.Wire;  >> "POST /solr/update HTTP/1.1[\r][\n]"
+DEBUG - 2015-12-28 15:34:40.843; org.apache.http.impl.conn.Wire;  >> "Content-Type: application/x-www-form-urlencoded; charset=UTF-8[\r][\n]"
+DEBUG - 2015-12-28 15:34:40.843; org.apache.http.impl.conn.Wire;  >> "User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrServer] 1.0[\r][\n]"
+DEBUG - 2015-12-28 15:34:40.843; org.apache.http.impl.conn.Wire;  >> "Content-Length: 67[\r][\n]"
+DEBUG - 2015-12-28 15:34:40.843; org.apache.http.impl.conn.Wire;  >> "Host: localhost:8080[\r][\n]"
+DEBUG - 2015-12-28 15:34:40.843; org.apache.http.impl.conn.Wire;  >> "Connection: Keep-Alive[\r][\n]"
+DEBUG - 2015-12-28 15:34:40.844; org.apache.http.impl.conn.Wire;  >> "[\r][\n]"
+DEBUG - 2015-12-28 15:34:40.844; org.apache.http.impl.conn.DefaultClientConnection; >> POST /solr/update HTTP/1.1
+DEBUG - 2015-12-28 15:34:40.844; org.apache.http.impl.conn.DefaultClientConnection; >> Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+DEBUG - 2015-12-28 15:34:40.844; org.apache.http.impl.conn.DefaultClientConnection; >> User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrServer] 1.0
+DEBUG - 2015-12-28 15:34:40.844; org.apache.http.impl.conn.DefaultClientConnection; >> Content-Length: 67
+DEBUG - 2015-12-28 15:34:40.844; org.apache.http.impl.conn.DefaultClientConnection; >> Host: localhost:8080
+DEBUG - 2015-12-28 15:34:40.844; org.apache.http.impl.conn.DefaultClientConnection; >> Connection: Keep-Alive
+DEBUG - 2015-12-28 15:34:40.845; org.apache.http.impl.conn.Wire;  >> "commit=true&softCommit=false&waitSearcher=true&wt=javabin&version=2"
+DEBUG - 2015-12-28 15:34:41.018; org.apache.http.impl.conn.Wire;  << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG - 2015-12-28 15:34:41.019; org.apache.http.impl.conn.Wire;  << "Server: Apache-Coyote/1.1[\r][\n]"
+DEBUG - 2015-12-28 15:34:41.019; org.apache.http.impl.conn.Wire;  << "Content-Type: application/octet-stream[\r][\n]"
+DEBUG - 2015-12-28 15:34:41.019; org.apache.http.impl.conn.Wire;  << "Content-Length: 41[\r][\n]"
+DEBUG - 2015-12-28 15:34:41.019; org.apache.http.impl.conn.Wire;  << "Date: Mon, 28 Dec 2015 07:34:40 GMT[\r][\n]"
+DEBUG - 2015-12-28 15:34:41.019; org.apache.http.impl.conn.Wire;  << "[\r][\n]"
+DEBUG - 2015-12-28 15:34:41.019; org.apache.http.impl.conn.DefaultClientConnection; Receiving response: HTTP/1.1 200 OK
+DEBUG - 2015-12-28 15:34:41.020; org.apache.http.impl.conn.DefaultClientConnection; << HTTP/1.1 200 OK
+DEBUG - 2015-12-28 15:34:41.020; org.apache.http.impl.conn.DefaultClientConnection; << Server: Apache-Coyote/1.1
+DEBUG - 2015-12-28 15:34:41.020; org.apache.http.impl.conn.DefaultClientConnection; << Content-Type: application/octet-stream
+DEBUG - 2015-12-28 15:34:41.020; org.apache.http.impl.conn.DefaultClientConnection; << Content-Length: 41
+DEBUG - 2015-12-28 15:34:41.020; org.apache.http.impl.conn.DefaultClientConnection; << Date: Mon, 28 Dec 2015 07:34:40 GMT
+DEBUG - 2015-12-28 15:34:41.020; org.apache.http.impl.client.DefaultRequestDirector; Connection can be kept alive indefinitely
+DEBUG - 2015-12-28 15:34:41.021; org.apache.http.impl.conn.Wire;  << "[0x2][0xa1][0xe0].responseHeader[0xa2][0xe0]&status[0x6][0x0][0x0][0x0][0x0][0xe0]%QTime[[\n]"
+DEBUG - 2015-12-28 15:34:41.021; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection [id: 0][route: {}->http://localhost:8080] can be kept alive indefinitely
+DEBUG - 2015-12-28 15:34:41.021; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection released: [id: 0][route: {}->http://localhost:8080][total kept alive: 1; route allocated: 1 of 32; total allocated: 1 of 128]
+DEBUG - 2015-12-28 15:58:20.143; org.apache.solr.client.solrj.impl.HttpClientUtil; Creating new http client, config:maxConnections=128&maxConnectionsPerHost=32&followRedirects=false
+DEBUG - 2015-12-28 15:58:20.398; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection request: [route: {}->http://localhost:8080][total kept alive: 0; route allocated: 0 of 32; total allocated: 0 of 128]
+DEBUG - 2015-12-28 15:58:20.412; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection leased: [id: 0][route: {}->http://localhost:8080][total kept alive: 0; route allocated: 1 of 32; total allocated: 1 of 128]
+DEBUG - 2015-12-28 15:58:20.426; org.apache.http.impl.conn.DefaultClientConnectionOperator; Connecting to localhost:8080
+DEBUG - 2015-12-28 15:58:20.451; org.apache.http.client.protocol.RequestAddCookies; CookieSpec selected: best-match
+DEBUG - 2015-12-28 15:58:20.459; org.apache.http.client.protocol.RequestAuthCache; Auth cache not set in the context
+DEBUG - 2015-12-28 15:58:20.459; org.apache.http.client.protocol.RequestTargetAuthentication; Target auth state: UNCHALLENGED
+DEBUG - 2015-12-28 15:58:20.460; org.apache.http.client.protocol.RequestProxyAuthentication; Proxy auth state: UNCHALLENGED
+DEBUG - 2015-12-28 15:58:20.460; org.apache.http.impl.client.DefaultRequestDirector; Attempt 1 to execute request
+DEBUG - 2015-12-28 15:58:20.460; org.apache.http.impl.conn.DefaultClientConnection; Sending request: GET /solr/select?q=product_name%3A%E5%B0%8F%E9%BB%84%E4%BA%BA&wt=javabin&version=2 HTTP/1.1
+DEBUG - 2015-12-28 15:58:20.461; org.apache.http.impl.conn.Wire;  >> "GET /solr/select?q=product_name%3A%E5%B0%8F%E9%BB%84%E4%BA%BA&wt=javabin&version=2 HTTP/1.1[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.462; org.apache.http.impl.conn.Wire;  >> "User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrServer] 1.0[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.462; org.apache.http.impl.conn.Wire;  >> "Host: localhost:8080[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.462; org.apache.http.impl.conn.Wire;  >> "Connection: Keep-Alive[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.462; org.apache.http.impl.conn.Wire;  >> "[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.462; org.apache.http.impl.conn.DefaultClientConnection; >> GET /solr/select?q=product_name%3A%E5%B0%8F%E9%BB%84%E4%BA%BA&wt=javabin&version=2 HTTP/1.1
+DEBUG - 2015-12-28 15:58:20.463; org.apache.http.impl.conn.DefaultClientConnection; >> User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrServer] 1.0
+DEBUG - 2015-12-28 15:58:20.463; org.apache.http.impl.conn.DefaultClientConnection; >> Host: localhost:8080
+DEBUG - 2015-12-28 15:58:20.463; org.apache.http.impl.conn.DefaultClientConnection; >> Connection: Keep-Alive
+DEBUG - 2015-12-28 15:58:20.475; org.apache.http.impl.conn.Wire;  << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.477; org.apache.http.impl.conn.Wire;  << "Server: Apache-Coyote/1.1[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.477; org.apache.http.impl.conn.Wire;  << "Content-Type: application/octet-stream[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.477; org.apache.http.impl.conn.Wire;  << "Transfer-Encoding: chunked[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.477; org.apache.http.impl.conn.Wire;  << "Date: Mon, 28 Dec 2015 07:58:20 GMT[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.478; org.apache.http.impl.conn.Wire;  << "[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.479; org.apache.http.impl.conn.DefaultClientConnection; Receiving response: HTTP/1.1 200 OK
+DEBUG - 2015-12-28 15:58:20.479; org.apache.http.impl.conn.DefaultClientConnection; << HTTP/1.1 200 OK
+DEBUG - 2015-12-28 15:58:20.479; org.apache.http.impl.conn.DefaultClientConnection; << Server: Apache-Coyote/1.1
+DEBUG - 2015-12-28 15:58:20.479; org.apache.http.impl.conn.DefaultClientConnection; << Content-Type: application/octet-stream
+DEBUG - 2015-12-28 15:58:20.479; org.apache.http.impl.conn.DefaultClientConnection; << Transfer-Encoding: chunked
+DEBUG - 2015-12-28 15:58:20.479; org.apache.http.impl.conn.DefaultClientConnection; << Date: Mon, 28 Dec 2015 07:58:20 GMT
+DEBUG - 2015-12-28 15:58:20.482; org.apache.http.impl.client.DefaultRequestDirector; Connection can be kept alive indefinitely
+DEBUG - 2015-12-28 15:58:20.495; org.apache.http.impl.conn.Wire;  << "2000[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.495; org.apache.http.impl.conn.Wire;  << "[0x2][0xa2][0xe0].responseHeader[0xa3][0xe0]&status[0x6][0x0][0x0][0x0][0x0][0xe0]%QTimeA[0xe0]&params[0xa3][0xe0]!q6product_name:[0xe5][0xb0][0x8f][0xe9][0xbb][0x84][0xe4][0xba][0xba][0xe0]"wt'javabin[0xe0]'version!2[0xe0](response[0xc][0x83]e`[0x0][0x85][0xb][0xa7][0xe0]/product_picture42014032417271233.png[0xe0]-product_price[0x8]A [0x0][0x0][0xe0]0product_keywords[0x82]?[0x90](<P align=left><BR></P>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.495; org.apache.http.impl.conn.Wire;  << "<DIV align=left>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.495; org.apache.http.impl.conn.Wire;  << "<TABLE id=table2 cellSpacing=5 cellPadding=5 width=700 align=left border=0>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.495; org.apache.http.impl.conn.Wire;  << "<TBODY>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.496; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.496; org.apache.http.impl.conn.Wire;  << "<TD align=middle bgColor=#f6f6f6 colSpan=4 height=30><FONT color=#808080 size=6>[0xe8][0xa7][0x84][0xc2][0xb7][0xe6][0xa0][0xbc][0xc2][0xb7][0xe5][0x8f][0x82][0xc2][0xb7][0xe6][0x95][0xb0]</FONT></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.496; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.496; org.apache.http.impl.conn.Wire;  << "<TD align=middle width=80 bgColor=#f6f6f6 height=29><FONT style=BACKGROUND-COLOR: #f6f6f6 face=[0xe5][0xae][0x8b][0xe4][0xbd][0x93] size=2>[0xe5][0x95][0x86][0xe5][0x93][0x81][0xe6][0xa6][0x82][0xe8][0xbf][0xb0]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.496; org.apache.http.impl.conn.Wire;  << "<TD width=608 bgColor=#f6f6f6 colSpan=3><FONT style=BACKGROUND-COLOR: #ffffff size=2></FONT><FONT size=2>[0xe7][0x9c][0xbc][0xe7][0x9d][0x9b][0xef][0xbc][0x9a][0xe5][0x8d][0x95][0xe5][0x8f][0xaa][0xe6][0x88][0x96][0xe5][0x8f][0x8c][0xe5][0x8f][0xaa][0xef][0xbc][0x8c][0xe5][0xa4][0xb4][0xe5][0x8f][0x91][0xef][0xbc][0x9a][0xe5][0x88][0xba][0xe5][0xa4][0xb4][0xe3][0x80][0x81][0xe5][0xa1][0x8c][0xe5][0xa1][0x8c][0xe7][0x9a][0x84][0xe5][0xb0][0x8f][0xe4][0xb8][0xad][0xe5][0x88][0x86][0xe3][0x80][0x81][0xe5][0x86][0xb2][0xe5][0xa4][0xa9][0xe4][0xb8][0x80][0xe5][0xb0][0x8f][0xe6][0x92][0xae][0xef][0xbc][0x8c][0xe8][0xba][0xab][0xe5][0x9e][0x8b][0xef][0xbc][0x9a][0xe9][0xbb][0x84][0xe8][0x89][0xb2][0xe8][0x83][0xb6][0xe5][0x9b][0x8a][0xe7][0x8a][0xb6][0xef][0xbc][0x8c][0xe8][0xba][0xab][0xe9][0xab][0x98][0xef][0xbc][0x9a]94--120cm[0xef][0xbc][0x8c]105cm[0xe4][0xb8][0xba][0xe6][0xa0][0x87][0xe5][0x87][0x86][0xe5][0x9e][0x8b][0xef][0xbc][0x8c][0xe6][0x80][0xa7][0xe6][0xa0][0xbc][0xef][0xbc][0x9a][0xe5][0x90][0xb5][0xe9][0x97][0xb9][0xe3][0x80][0x81][0xe6][0x98][0x93][0xe6][0xbb][0xa1][0xe8][0xb6][0xb3][0xe3][0x80][0x81][0xe7][0x88][0xb1][0xe4][0xba][0xab][0xe5][0x8f][0x97][0xe3][0x80][0x81][0xe5][0x90][0xac][0xe4][0xb8][0xbb][0xe4][0xba][0xba][0xe8][0xaf][0x9d][0xe3][0x80][0x81][0xe4][0xb9][0x90][0xe4][0xba][0x8e][0xe5][0x8a][0xa9][0xe4][0xba][0xba][0xef][0xbc][0x8c][0xe5][0xb1][0x9e][0xe6][0x80][0xa7][0xef][0xbc][0x9a][0xe5][0x91][0x86][0xe8][0xa0][0xa2][0xe3][0x80][0x81][0xe8][0xb4][0xb1][0xe8][0x90][0x8c][0xe7][0x9a][0x84][0xe6][0x8a][0x80][0xe6][0x9c][0xaf][0xe5][0xae][0x85][0xef][0xbc][0x8c][0xe5][0x96][0x9c][0xe6][0xac][0xa2][0xef][0xbc][0x9a][0xe5][0xa4][0xa7][0xe7][0xac][0x91][0xe3][0x80][0x81][0xe7][0x8e][0xa9][0xe8][0x80][0x8d][0xef][0xbc][0x8c][0xe8][0xae][0xa8][0xe5][0x8e][0x8c][0xef][0xbc][0x9a][0xe8][0xa2][0xab][0xe5][0x98][0xb2][0xe7][0xac][0x91][0xe3][0x80][0x82][0xe8][0xbf][0x99][0xe5][0xb0][0xb1][0xe6][0x98][0xaf][0xe7][0xa5][0x9e][0xe5][0x81][0xb7][0xe5][0xa5][0xb6][0xe7][0x88][0xb8][0xe9][0x87][0x8c][0xe7][0x9a][0x84][0xe5][0xb0][0x8f][0xe9][0xbb][0x84][0xe4][0xba][0xba][0xe3][0x80][0x82][0xe7][0x8e][0xb0][0xe5][0x9c][0xa8][0xe7][0x9a][0x84][0xe5][0xae][0x83][0xe7][0x94][0xb1][0xe6][0x90][0xaa][0xe8][0x83][0xb6][0xe5][0x88][0xb6][0xe4][0xbd][0x9c][0xe8][0x80][0x8c][0xe6][0x88][0x90][0xef][0xbc][0x8c][0xe5][0xbd][0xa2][0xe8][0xb1][0xa1][0xe5][0x8f][0xaf][0xe7][0x88][0xb1][0xef][0xbc][0x8c][0xe6][0x9f][0x94][0xe8][0xbd][0xaf][0xe8][0x88][0x92][0xe9][0x80][0x82][0xef][0xbc][0x8c][0xe4][0xb8][0x80][0xe6][0x8c][0xa4][0xe4][0xb8][0x80][0xe6][0x8d][0x8f][0xe5][0xb0][0xb1][0xe4][0xbc][0x9a][0xe5][0x8f][0x91][0xe5][0x87][0xba][0xe5][0xb0][0x96][0xe5][0x8f][0xab][0xe7][0x9a][0x84][0xe5][0xa3][0xb0][0xe9][0x9f][0xb3][0xef][0xbc][0x8c][0xe6][0x83][0xb3][0xe8][0xa6][0x81][0xe5][0x8f][0x91][0xe6][0xb3][0x84][0xe5][0xae][0x83][0xe5][0xb0][0xb1][0xe6][0x98][0xaf][0xe5][0xaf][0xb9][0xe8][0xb1][0xa1][0xef][0xbc][0x8c][0xe8][0xae][0xa9][0xe4][0xbd][0xa0][0xe5][0x9c][0xa8][0xe8][0xbf][0x99][0xe5][0x8e][0x8b][0xe5][0x8a][0x9b][0xe5][0x92][0x8c][0xe7][0xb4][0xa7][0xe5][0xbc][0xa0][0xe4][0xb8][0xad][0xe5][0xbe][0x97][0xe4][0xbb][0xa5][0xe9][0x87][0x8a][0xe6][0x94][0xbe][0xe5][0x92][0x8c][0xe6][0x8e][0x92][0xe8][0xa7][0xa3][0xe3][0x80][0x82][0xe5][0xae][0x83][0xe4][0xb9][0x9f][0xe6][0x98][0xaf][0xe4][0xb8][0xaa][0xe5][0x8f][0xaf][0xe7][0x88][0xb1][0xe7][0xb2][0xbe][0xe7][0x81][0xb5][0xe7][0x9a][0x84][0xe7][0x8e][0xa9][0xe7][0x89][0xa9][0xe3][0x80][0x82]</FONT></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.496; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.497; org.apache.http.impl.conn.Wire;  << "<TD align=middle bgColor=#f6f6f6 height=29><FONT size=2>[0xe5][0x95][0x86][0xe5][0x93][0x81][0xe6][0x9d][0x90][0xe8][0xb4][0xa8]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.497; org.apache.http.impl.conn.Wire;  << "<TD width=255 bgColor=#f6f6f6><FONT size=2>[0xe6][0x90][0xaa][0xe8][0x83][0xb6]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.497; org.apache.http.impl.conn.Wire;  << "<TD align=middle width=80 bgColor=#f6f6f6><FONT size=2>[0xe5][0x95][0x86][0xe5][0x93][0x81][0xe5][0xb0][0xba][0xe5][0xaf][0xb8]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.497; org.apache.http.impl.conn.Wire;  << "<TD width=249 bgColor=#f6f6f6><SPAN style=DISPLAY: inline! important; FLOAT: none; WORD-SPACING: 0px; FONT: 12px/18px Tahoma, Arial, [0xe5][0xae][0x8b][0xe4][0xbd][0x93], sans-serif; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); TEXT-INDENT: 0px; WHITE-SPACE: normal; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-ALIGN: left; webkit-text-stroke-width: 0px>9.2*11.5cm</SPAN></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.497; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.497; org.apache.http.impl.conn.Wire;  << "<TD align=middle bgColor=#f6f6f6><FONT size=2>[0xe5][0x95][0x86][0xe5][0x93][0x81][0xe5][0x93][0x81][0xe7][0x89][0x8c]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.497; org.apache.http.impl.conn.Wire;  << "<TD width=255 bgColor=#f6f6f6></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.497; org.apache.http.impl.conn.Wire;  << "<TD align=middle width=80 bgColor=#f6f6f6 height=29><FONT size=2>[0xe5][0x95][0x86][0xe5][0x93][0x81][0xe5][0x8c][0x85][0xe8][0xa3][0x85]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.498; org.apache.http.impl.conn.Wire;  << "<TD width=249 bgColor=#f6f6f6>[0xe5][0xb0][0xbc][0xe9][0xbe][0x99][0xe7][0xbd][0x91][0xe8][0xa2][0x8b]</TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.498; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.498; org.apache.http.impl.conn.Wire;  << "<TD align=middle bgColor=#f6f6f6 height=29><FONT size=2>[0xe5][0x95][0x86][0xe5][0x93][0x81][0xe9][0x87][0x8d][0xe9][0x87][0x8f]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.498; org.apache.http.impl.conn.Wire;  << "<TD width=255 bgColor=#f6f6f6>16</TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.498; org.apache.http.impl.conn.Wire;  << "<TD align=middle width=80 bgColor=#f6f6f6><FONT size=2>[0xe5][0x95][0x86][0xe5][0x93][0x81][0xe8][0xa7][0x84][0xe6][0xa0][0xbc]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.498; org.apache.http.impl.conn.Wire;  << "<TD width=249 bgColor=#f6f6f6><SPAN style=DISPLAY: inline! important; FLOAT: none; WORD-SPACING: 0px; FONT: 12px/18px Tahoma, Arial, [0xe5][0xae][0x8b][0xe4][0xbd][0x93], sans-serif; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); TEXT-INDENT: 0px; WHITE-SPACE: normal; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-ALIGN: left; webkit-text-stroke-width: 0px></SPAN></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.498; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.499; org.apache.http.impl.conn.Wire;  << "<TD align=middle bgColor=#f6f6f6 height=29><FONT size=2>[0xe9][0xa2][0x9c][0xe8][0x89][0xb2][0xe6][0xac][0xbe][0xe5][0xbc][0x8f]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.499; org.apache.http.impl.conn.Wire;  << "<TD width=255 bgColor=#f6f6f6>[0xe9][0xbb][0x84][0xe8][0x89][0xb2]</TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.499; org.apache.http.impl.conn.Wire;  << "<TD align=middle width=80 bgColor=#f6f6f6><FONT size=2>[0xe8][0xa3][0x85][0xe7][0xae][0xb1][0xe6][0x95][0xb0][0xe9][0x87][0x8f]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.499; org.apache.http.impl.conn.Wire;  << "<TD width=249 bgColor=#f6f6f6><SPAN style=DISPLAY: inline! important; FLOAT: none; WORD-SPACING: 0px; FONT: 12px/18px Tahoma, Arial, [0xe5][0xae][0x8b][0xe4][0xbd][0x93], sans-serif; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); TEXT-INDENT: 0px; WHITE-SPACE: normal; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-ALIGN: left; webkit-text-stroke-width: 0px>60[0xe4][0xb8][0xaa]</SPAN></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.499; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.499; org.apache.http.impl.conn.Wire;  << "<TD align=middle bgColor=#f6f6f6 height=29><FONT size=2>[0xe6][0xb8][0xa9][0xe9][0xa6][0xa8][0xe6][0x8f][0x90][0xe9][0x86][0x92]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.500; org.apache.http.impl.conn.Wire;  << "<TD width=608 bgColor=#f6f6f6 colSpan=3>[0xe3][0x80][0x80]</TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.500; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.500; org.apache.http.impl.conn.Wire;  << "<TD colSpan=4 height=313>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.500; org.apache.http.impl.conn.Wire;  << "<TABLE id=table3 height=345 cellSpacing=0 cellPadding=0 width=700 border=0>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.500; org.apache.http.impl.conn.Wire;  << "<TBODY>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.500; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.501; org.apache.http.impl.conn.Wire;  << "<TD height=131>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.501; org.apache.http.impl.conn.Wire;  << "<P align=center><BR><BR><BR><BR>&nbsp;</P></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.501; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.501; org.apache.http.impl.conn.Wire;  << "<TD height=131>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.501; org.apache.http.impl.conn.Wire;  << "<P><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201403/2014032417084459.png border=0><BR><BR><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201403/2014032417200618.png border=0></P>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.502; org.apache.http.impl.conn.Wire;  << "<P><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201212/2012122410564934.jpg border=0></P></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.502; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.503; org.apache.http.impl.conn.Wire;  << "<TD height=100>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.503; org.apache.http.impl.conn.Wire;  << "<P align=center><BR><BR><BR><BR><BR><BR>&nbsp;</P></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.503; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.503; org.apache.http.impl.conn.Wire;  << "<TD height=131><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201212/2012122410564950.jpg border=0></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.504; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.504; org.apache.http.impl.conn.Wire;  << "<TD height=100>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.504; org.apache.http.impl.conn.Wire;  << "<P align=center><BR><BR><BR>&nbsp;</P>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.504; org.apache.http.impl.conn.Wire;  << "<P align=center><BR><BR>&nbsp;</P></TD></TR></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.504; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.505; org.apache.http.impl.conn.Wire;  << "<TD height=131>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.505; org.apache.http.impl.conn.Wire;  << "<P><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201403/2014032417250754.png border=0></P>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.505; org.apache.http.impl.conn.Wire;  << "<P><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201403/2014032417250758.png border=0></P>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.505; org.apache.http.impl.conn.Wire;  << "<P><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201403/2014032417200616.png border=0></P>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.505; org.apache.http.impl.conn.Wire;  << "<P><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201212/2012122410564910.jpg border=0></P></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.506; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.506; org.apache.http.impl.conn.Wire;  << "<TD height=100>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.506; org.apache.http.impl.conn.Wire;  << "<P align=center><STRONG><FONT size=4><BR><BR><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201403/2014032417271233.png border=0></FONT></STRONG></P></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.506; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.507; org.apache.http.impl.conn.Wire;  << "<TD height=131><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201212/2012122410564955.jpg border=0></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.507; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.508; org.apache.http.impl.conn.Wire;  << "<TD height=100>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.508; org.apache.http.impl.conn.Wire;  << "<P align=center><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201403/2014032417250772.png border=0><BR>&nbsp;</P></TD></TR></TBODY></TABLE>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.508; org.apache.http.impl.conn.Wire;  << "<P align=left><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201212/2012122915213662.jpg border=0></P></TD></TR></TBODY></TABLE></DIV>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.508; org.apache.http.impl.conn.Wire;  << "<P align=left>&nbsp;</P>?&[0xe7][0xa5][0x9e][0xe5][0x81][0xb7][0xe5][0xa5][0xb6][0xe7][0x88][0xb8][0xe7][0x94][0xb5][0xe5][0xbd][0xb1][0xe5][0x90][0x8c][0xe6][0xac][0xbe]&nbsp;[0xe6][0x83][0xa8][0xe5][0x8f][0xab][0xe5][0x8f][0x91][0xe6][0xb3][0x84][0xe5][0x85][0xac][0xe4][0xbb][0x94]&nbsp;[0xe5][0x8f][0x91][0xe5][0xa3][0xb0][0xe5][0xb0][0x8f][0xe9][0xbb][0x84][0xe4][0xba][0xba][0xe0]/product_catalog"17[0xe0],product_name?&[0xe7][0xa5][0x9e][0xe5][0x81][0xb7][0xe5][0xa5][0xb6][0xe7][0x88][0xb8][0xe7][0x94][0xb5][0xe5][0xbd][0xb1][0xe5][0x90][0x8c][0xe6][0xac][0xbe]&nbsp;[0xe6][0x83][0xa8][0xe5][0x8f][0xab][0xe5][0x8f][0x91][0xe6][0xb3][0x84][0xe5][0x85][0xac][0xe4][0xbb][0x94]&nbsp;[0xe5][0x8f][0x91][0xe5][0xa3][0xb0][0xe5][0xb0][0x8f][0xe9][0xbb][0x84][0xe4][0xba][0xba][0xe0]"id!3[0xe0])_version_[0x7][0x15][0x1e]v[0xfe][0xce]p[0x0][0x0][0xb][0xa7][0xe9]42014032416533215.png[0xea][0x8]AP[0x0][0x0][0xeb][0x82]?[0x8f]&<BR><BR><BR><BR><BR><BR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.509; org.apache.http.impl.conn.Wire;  << "<TABLE id=table2 cellSpacing=5 cellPadding=5 width=700 border=0>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.509; org.apache.http.impl.conn.Wire;  << "<TBODY>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.509; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.510; org.apache.http.impl.conn.Wire;  << "<TD align=middle bgColor=#f6f6f6 colSpan=4 height=30><FONT color=#808080 size=6>[0xe8][0xa7][0x84][0xc2][0xb7][0xe6][0xa0][0xbc][0xc2][0xb7][0xe5][0x8f][0x82][0xc2][0xb7][0xe6][0x95][0xb0]</FONT></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.510; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.510; org.apache.http.impl.conn.Wire;  << "<TD align=middle width=80 bgColor=#f6f6f6 height=29><FONT style=BACKGROUND-COLOR: #f6f6f6 face=[0xe5][0xae][0x8b][0xe4][0xbd][0x93] size=2>[0xe5][0x95][0x86][0xe5][0x93][0x81][0xe6][0xa6][0x82][0xe8][0xbf][0xb0]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.510; org.apache.http.impl.conn.Wire;  << "<TD width=608 bgColor=#f6f6f6 colSpan=3><FONT size=2>[0xe8][0xbf][0x99][0xe6][0x98][0xaf][0xe7][0xa5][0x9e][0xe5][0x81][0xb7][0xe5][0xa5][0xb6][0xe7][0x88][0xb8][0xe7][0x94][0xb5][0xe5][0xbd][0xb1][0xe5][0x90][0x8c][0xe6][0xac][0xbe][0xe7][0x9a][0x84][0xe5][0xb0][0x8f][0xe9][0xbb][0x84][0xe4][0xba][0xba][0xef][0xbc][0x8c][0xe6][0x98][0xaf][0xe4][0xb8][0xa4][0xe4][0xb8][0xaa][0xe4][0xb8][0xbb][0xe4][0xba][0xba][0xe5][0x85][0xac][0xe6][0xa0][0xbc][0xe9][0xb2][0x81][0xe5][0x92][0x8c][0xe7][0xba][0xb3][0xe7][0x93][0xa6][0xe5][0x88][0xa9][0xe6][0xac][0xa7][0xe5][0x8d][0x9a][0xe5][0xa3][0xab][0xe7][0x94][0xa8][0xe5][0x8f][0x98][0xe7][0xa7][0x8d]DNA[0xe3][0x80][0x81][0xe8][0x84][0x82][0xe8][0x82][0xaa][0xe9][0x85][0xb8][0xe5][0x92][0x8c][0xe9][0xa6][0x99][0xe8][0x95][0x89][0xe6][0xb3][0xa5][0xe7][0xbb][0x84][0xe6][0x88][0x90][0xe7][0x9a][0x84][0xe8][0x83][0xb6][0xe5][0x9b][0x8a][0xe7][0x8a][0xb6][0xe7][0x94][0x9f][0xe7][0x89][0xa9][0xef][0xbc][0x8c][0xe7][0x9f][0xad][0xe8][0x83][0xb3][0xe8][0x86][0x8a][0xe7][0x9f][0xad][0xe8][0x85][0xbf][0xef][0xbc][0x8c][0xe7][0xa9][0xbf][0xe7][0x9d][0x80][0xe8][0x93][0x9d][0xe8][0x89][0xb2][0xe8][0x83][0x8c][0xe5][0xb8][0xa6][0xe8][0xa3][0x85][0xef][0xbc][0x8c][0xe5][0xb1][0x9e][0xe4][0xba][0x8e][0xe9][0x82][0xa3][0xe5][0x91][0x86][0xe8][0xa0][0xa2][0xe3][0x80][0x81][0xe8][0xb4][0xb1][0xe8][0x90][0x8c][0xe7][0x9a][0x84][0xe6][0x8a][0x80][0xe6][0x9c][0xaf][0xe5][0xae][0x85][0xe3][0x80][0x82][0xe7][0xba][0xbf][0xe4][0xb8][0x8b][0xe7][0x9a][0x84][0xe5][0xae][0x83][0xef][0xbc][0x8c][0xe7][0x94][0xb1][0xe6][0x90][0xaa][0xe8][0x83][0xb6][0xe5][0x88][0xb6][0xe6][0x88][0x90][0xef][0xbc][0x8c][0xe8][0xbd][0xaf][0xe8][0xbd][0xaf][0xe7][0x9a][0x84][0xe3][0x80][0x81][0xe9][0xbc][0x93][0xe9][0xbc][0x93][0xe7][0x9a][0x84][0xef][0xbc][0x8c][0xe4][0xb8][0x80][0xe6][0x8c][0xa4][0xe4][0xb8][0x80][0xe5][0x8e][0x8b][0xe5][0xb0][0xb1][0xe4][0xbc][0x9a][0xe8][0xae][0xa9][0xe4][0xb8][0xa4][0xe4][0xb8][0xaa][0xe5][0xa4][0xa7][0xe7][0x9c][0xbc][0xe7][0x90][0x83][0xe8][0xb9][0xa6][0xe5][0x87][0xba][0xe6][0x9d][0xa5][0xe3][0x80][0x81][0xe8][0xbd][0xac][0xe8][0xb5][0xb7][0xe6][0x9d][0xa5][0xe3][0x80][0x82][0xe4][0xbb][0xbb][0xe5][0x87][0xad][0xe4][0xb8][0xbb][0xe4][0xba][0xba][0xe5][0xa6][0x82][0xe4][0xbd][0x95][0xe7][0x99][0xbe][0xe8][0x88][0xac][0xe7][0xb3][0x9f][0xe8][0xb9][0x8b][0xe3][0x80][0x81][0xe4][0xb8][0x87][0xe7][0xa7][0x8d][0xe8][0xb9][0x82][0xe8][0x99][0x90][0xef][0xbc][0x8c][0xe4][0xbb][0x8d][0xe7][0x84][0xb6][0xe4][0xbf][0x9d][0xe6][0x8c][0x81][0xe5][0x8e][0x9f][0xe7][0x8a][0xb6][0xef][0xbc][0x8c][0xe5][0xa6][0x82][0xe6][0x9e][0x9c][0xe4][0xbd][0xa0][0xe7][0x9a][0x84][0xe5][0xbf][0x83][0xe6][0x83][0x85][0xe5][0xbf][0xab][0xe4][0xb9][0x90][0xe4][0xba][0x86][0xe3][0x80][0x81][0xe6][0x83][0x85][0xe7][0xbb][0xaa][0xe7][0xa8][0xb3][0xe5][0xae][0x9a][0xe4][0xba][0x86][0xef][0xbc][0x8c][0xe8][0xbf][0x99][0xe5][0xb0][0xb1][0xe6][0x98][0xaf][0xe5][0xae][0x83][0xe6][0x83][0xb3][0xe8][0xa6][0x81][0xe8][0xbe][0xbe][0xe5][0x88][0xb0][0xe7][0x9a][0x84][0xe3][0x80][0x82]</FONT></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.510; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.511; org.apache.http.impl.conn.Wire;  << "<TD align=middle bgColor=#f6f6f6 height=29><FONT size=2>[0xe5][0x95][0x86][0xe5][0x93][0x81][0xe6][0x9d][0x90][0xe8][0xb4][0xa8]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.511; org.apache.http.impl.conn.Wire;  << "<TD width=255 bgColor=#f6f6f6><SPAN style=DISPLAY: inline! important; FLOAT: none; WORD-SPACING: 0px; FONT: 12px/18px Tahoma, Arial, [0xe5][0xae][0x8b][0xe4][0xbd][0x93], sans-serif; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); TEXT-INDENT: 0px; WHITE-SPACE: normal; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-ALIGN: left; webkit-text-stroke-width: 0px>[0xe6][0x90][0xaa][0xe8][0x83][0xb6]</SPAN><FONT size=2></FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.511; org.apache.http.impl.conn.Wire;  << "<TD align=middle width=80 bgColor=#f6f6f6><FONT size=2>[0xe5][0x95][0x86][0xe5][0x93][0x81][0xe5][0xb0][0xba][0xe5][0xaf][0xb8]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.511; org.apache.http.impl.conn.Wire;  << "<TD width=249 bgColor=#f6f6f6><SPAN style=DISPLAY: inline! important; FLOAT: none; WORD-SPACING: 0px; FONT: 12px/18px Tahoma, Arial, [0xe5][0xae][0x8b][0xe4][0xbd][0x93], sans-serif; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); TEXT-INDENT: 0px; WHITE-SPACE: normal; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-ALIGN: left; webkit-text-stroke-width: 0px>12*7cm</SPAN></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.511; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.511; org.apache.http.impl.conn.Wire;  << "<TD align=middle bgColor=#f6f6f6><FONT size=2>[0xe5][0x95][0x86][0xe5][0x93][0x81][0xe5][0x93][0x81][0xe7][0x89][0x8c]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.512; org.apache.http.impl.conn.Wire;  << "<TD width=255 bgColor=#f6f6f6></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.512; org.apache.http.impl.conn.Wire;  << "<TD align=middle width=80 bgColor=#f6f6f6 height=29><FONT size=2>[0xe5][0x95][0x86][0xe5][0x93][0x81][0xe5][0x8c][0x85][0xe8][0xa3][0x85]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.512; org.apache.http.impl.conn.Wire;  << "<TD width=249 bgColor=#f6f6f6>&nbsp;PVC[0xe5][0x9c][0x86][0xe7][0xad][0x92][0xe7][0x9b][0x92]</TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.512; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.512; org.apache.http.impl.conn.Wire;  << "<TD align=middle bgColor=#f6f6f6 height=29><FONT size=2>[0xe5][0x95][0x86][0xe5][0x93][0x81][0xe9][0x87][0x8d][0xe9][0x87][0x8f]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.512; org.apache.http.impl.conn.Wire;  << "<TD width=255 bgColor=#f6f6f6>16</TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.512; org.apache.http.impl.conn.Wire;  << "<TD align=middle width=80 bgColor=#f6f6f6><FONT size=2>[0xe5][0x95][0x86][0xe5][0x93][0x81][0xe8][0xa7][0x84][0xe6][0xa0][0xbc]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.513; org.apache.http.impl.conn.Wire;  << "<TD width=249 bgColor=#f6f6f6><SPAN style=DISPLAY: inline! important; FLOAT: none; WORD-SPACING: 0px; FO"
+DEBUG - 2015-12-28 15:58:20.515; org.apache.http.impl.conn.Wire;  << "NT: 12px/18px Tahoma, Arial, [0xe5][0xae][0x8b][0xe4][0xbd][0x93], sans-serif; TEXT-TRANSFORM: none; COLOR: rgb(51,51,51); TEXT-INDENT: 0px; WHITE-SPACE: normal; LETTER-SPACING: normal; B"
+DEBUG - 2015-12-28 15:58:20.515; org.apache.http.impl.conn.Wire;  << "[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.516; org.apache.http.impl.conn.Wire;  << "2000[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.516; org.apache.http.impl.conn.Wire;  << "ACKGROUND-COLOR: rgb(255,255,255); TEXT-ALIGN: left; webkit-text-stroke-width: 0px>78*50*50cm</SPAN></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.516; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.516; org.apache.http.impl.conn.Wire;  << "<TD align=middle bgColor=#f6f6f6 height=29><FONT size=2>[0xe9][0xa2][0x9c][0xe8][0x89][0xb2][0xe6][0xac][0xbe][0xe5][0xbc][0x8f]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.516; org.apache.http.impl.conn.Wire;  << "<TD width=255 bgColor=#f6f6f6>[0xe9][0xbb][0x84][0xe8][0x89][0xb2]</TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.516; org.apache.http.impl.conn.Wire;  << "<TD align=middle width=80 bgColor=#f6f6f6><FONT size=2>[0xe8][0xa3][0x85][0xe7][0xae][0xb1][0xe6][0x95][0xb0][0xe9][0x87][0x8f]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.516; org.apache.http.impl.conn.Wire;  << "<TD width=249 bgColor=#f6f6f6>48[0xe4][0xb8][0xaa]</TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.516; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.517; org.apache.http.impl.conn.Wire;  << "<TD align=middle bgColor=#f6f6f6 height=29><FONT size=2>[0xe6][0xb8][0xa9][0xe9][0xa6][0xa8][0xe6][0x8f][0x90][0xe9][0x86][0x92]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.517; org.apache.http.impl.conn.Wire;  << "<TD width=608 bgColor=#f6f6f6 colSpan=3>[0xe3][0x80][0x80]</TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.517; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.517; org.apache.http.impl.conn.Wire;  << "<TD colSpan=4 height=313>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.517; org.apache.http.impl.conn.Wire;  << "<TABLE id=table3 height=345 cellSpacing=0 cellPadding=0 width=700 border=0>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.517; org.apache.http.impl.conn.Wire;  << "<TBODY>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.517; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.517; org.apache.http.impl.conn.Wire;  << "<TD height=131>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.518; org.apache.http.impl.conn.Wire;  << "<P align=center><BR><BR><BR><BR><BR><BR>&nbsp;</P></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.518; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.518; org.apache.http.impl.conn.Wire;  << "<TD height=131><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201212/2012122410564934.jpg border=0></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.518; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.518; org.apache.http.impl.conn.Wire;  << "<TD height=100>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.518; org.apache.http.impl.conn.Wire;  << "<P align=center><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201403/2014032416471308.png border=0><BR><BR>&nbsp;</P></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.518; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.519; org.apache.http.impl.conn.Wire;  << "<TD height=131><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201212/2012122410564950.jpg border=0></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.519; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.519; org.apache.http.impl.conn.Wire;  << "<TD height=100>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.519; org.apache.http.impl.conn.Wire;  << "<P align=center><BR><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201403/2014032416420720.png border=0><BR><BR><BR><BR><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201403/2014032416423004.png border=0><BR><BR><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201403/2014032416430705.png border=0><BR><BR><BR><BR>&nbsp;</P></TD></TR></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.519; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.519; org.apache.http.impl.conn.Wire;  << "<TD height=131><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201403/2014032416444759.png border=0><BR><BR><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201212/2012122410564910.jpg border=0></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.519; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.519; org.apache.http.impl.conn.Wire;  << "<TD height=100>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.520; org.apache.http.impl.conn.Wire;  << "<P align=center><STRONG><FONT size=4><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201403/2014032416455242.png border=0></FONT></STRONG></P></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.520; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.520; org.apache.http.impl.conn.Wire;  << "<TD height=131><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201212/2012122410564955.jpg border=0></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.520; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.520; org.apache.http.impl.conn.Wire;  << "<TD height=100>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.520; org.apache.http.impl.conn.Wire;  << "<P align=center><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201403/2014032416474771.png border=0><BR><BR><BR><BR><BR>&nbsp;</P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201212/2012122915213662.jpg border=0>?&[0xe7][0xa5][0x9e][0xe5][0x81][0xb7][0xe5][0xa5][0xb6][0xe7][0x88][0xb8][0xe7][0x94][0xb5][0xe5][0xbd][0xb1][0xe5][0x90][0x8c][0xe6][0xac][0xbe]&nbsp;&nbsp;[0xe5][0x8f][0x91][0xe6][0xb3][0x84][0xe5][0x85][0xac][0xe4][0xbb][0x94]&nbsp;[0xe6][0x9a][0xb4][0xe7][0x9c][0xbc][0xe5][0xb0][0x8f][0xe9][0xbb][0x84][0xe4][0xba][0xba][0xec]"17[0xed]?&[0xe7][0xa5][0x9e][0xe5][0x81][0xb7][0xe5][0xa5][0xb6][0xe7][0x88][0xb8][0xe7][0x94][0xb5][0xe5][0xbd][0xb1][0xe5][0x90][0x8c][0xe6][0xac][0xbe]&nbsp;&nbsp;[0xe5][0x8f][0x91][0xe6][0xb3][0x84][0xe5][0x85][0xac][0xe4][0xbb][0x94]&nbsp;[0xe6][0x9a][0xb4][0xe7][0x9c][0xbc][0xe5][0xb0][0x8f][0xe9][0xbb][0x84][0xe4][0xba][0xba][0xee]!4[0xef][0x7][0x15][0x1e]v[0xfe][0xce][0xb0][0x0][0x0][0xb][0xa7][0xe9]42014032515340838.png[0xea][0x8]@[0xb0][0x0][0x0][0xeb][0x82]?[0xa6][0x1c]<TABLE id=table2 cellSpacing=5 cellPadding=5 width=700 border=0>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.520; org.apache.http.impl.conn.Wire;  << "<TBODY>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.520; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.521; org.apache.http.impl.conn.Wire;  << "<TD align=middle bgColor=#f6f6f6 colSpan=4 height=30><FONT color=#808080 size=6>[0xe8][0xa7][0x84][0xc2][0xb7][0xe6][0xa0][0xbc][0xc2][0xb7][0xe5][0x8f][0x82][0xc2][0xb7][0xe6][0x95][0xb0]</FONT></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.521; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.521; org.apache.http.impl.conn.Wire;  << "<TD align=middle width=80 bgColor=#f6f6f6 height=29><FONT style=BACKGROUND-COLOR: #f6f6f6 face=[0xe5][0xae][0x8b][0xe4][0xbd][0x93] size=2>[0xe5][0x95][0x86][0xe5][0x93][0x81][0xe6][0xa6][0x82][0xe8][0xbf][0xb0]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.521; org.apache.http.impl.conn.Wire;  << "<TD width=608 bgColor=#f6f6f6 colSpan=3><FONT size=2>[0xe5][0x96][0x9c][0xe6][0xac][0xa2][0xe7][0xa5][0x9e][0xe5][0x81][0xb7][0xe5][0xa5][0xb6][0xe7][0x88][0xb8][0xe9][0x87][0x8c][0xe7][0x9a][0x84][0xe9][0x82][0xa3][0xe4][0xba][0x9b][0xe5][0xb0][0x8f][0xe9][0xbb][0x84][0xe4][0xba][0xba][0xe5][0x90][0xa7][0xef][0xbc][0x8c][0xe5][0x8f][0xaf][0xe7][0x88][0xb1][0xe7][0x81][0xb5][0xe6][0xb4][0xbb][0xe3][0x80][0x81][0xe4][0xb9][0x96][0xe5][0xb7][0xa7][0xe7][0xb2][0xbe][0xe7][0x81][0xb5][0xef][0xbc][0x8c][0xe7][0x9b][0xb8][0xe4][0xbf][0xa1][0xe9][0x82][0xa3][0xe6][0xa8][0xa1][0xe6][0xa0][0xb7][0xe9][0x82][0xa3][0xe7][0x8a][0xb6][0xe6][0x80][0x81][0xe9][0x82][0xa3][0xe6][0x83][0x85][0xe6][0x99][0xaf][0xe4][0xbc][0x9a][0xe4][0xbb][0xa4][0xe7][0x9c][0x8b][0xe5][0x88][0xb0][0xe8][0xbf][0x87][0xe4][0xbb][0x96][0xe4][0xbb][0xac][0xe7][0x9a][0x84][0xe6][0xaf][0x8f][0xe4][0xb8][0xaa][0xe4][0xba][0xba][0xe9][0x83][0xbd][0xe9][0x9a][0xbe][0xe5][0xbf][0x98][0xe3][0x80][0x82][0xe7][0x8e][0xb0][0xe5][0x9c][0xa8][0xe5][0xae][0x83][0xe6][0x9d][0xa5][0xe4][0xba][0x86][0xef][0xbc][0x8c][0xe6][0x9d][0xa5][0xe5][0x88][0xb0][0xe4][0xba][0x86][0xe6][0x88][0x91][0xe4][0xbb][0xac][0xe7][0x9a][0x84][0xe9][0x9d][0xa2][0xe5][0x89][0x8d][0xef][0xbc][0x8c][0xe5][0xb0][0xb1][0xe5][0x9c][0xa8][0xe6][0x88][0x91][0xe4][0xbb][0xac][0xe7][0x9a][0x84][0xe4][0xb8][0x80][0xe6][0x97][0xa5][0xe4][0xb8][0x89][0xe9][0xa4][0x90][0xe9][0x87][0x8c][0xe3][0x80][0x82][0xe8][0xbf][0x99][0xe7][0xa7][0x8d][0xe8][0xae][0xbe][0xe8][0xae][0xa1][0xe6][0x98][0xaf][0xe4][0xba][0xba][0xe6][0x80][0xa7][0xe7][0x9a][0x84][0xe7][0xa7][0x91][0xe5][0xad][0xa6][0xe7][0x9a][0x84][0xef][0xbc][0x8c][0xe6][0x98][0xaf][0xe4][0xb8][0xba][0xe4][0xba][0x86][0xe5][0xad][0xa6][0xe9][0xbd][0xa1][0xe5][0x89][0x8d][0xe5][0x84][0xbf][0xe7][0xab][0xa5][0xe5][0xad][0xa6][0xe7][0xad][0xb7][0xe6][0x97][0xb6][0xe4][0xbd][0xbf][0xe7][0x94][0xa8][0xef][0xbc][0x8c][0xe8][0xb5][0xb7][0xe5][0x88][0xb0][0xe5][0xbc][0x95][0xe5][0xaf][0xbc][0xe3][0x80][0x81][0xe5][0xad][0xa6][0xe4][0xb9][0xa0][0xe5][0x92][0x8c][0xe7][0xba][0xa0][0xe6][0xad][0xa3][0xe4][0xbd][0x9c][0xe7][0x94][0xa8][0xe3][0x80][0x82][0xe5][0xaf][0xb9][0xe4][0xba][0x8e][0xe4][0xbb][0xa5][0xe5][0x90][0x8e][0xe7][0x94][0xa8][0xe7][0xac][0x94][0xe4][0xb9][0x9f][0xe6][0x98][0xaf][0xe4][0xb8][0x80][0xe7][0xa7][0x8d][0xe6][0x8f][0x90][0xe5][0x8d][0x87][0xe5][0x92][0x8c][0xe4][0xbf][0x83][0xe8][0xbf][0x9b][0xe3][0x80][0x82][0xe6][0x98][0x93][0xe6][0x8a][0x8a][0xe6][0x8f][0xa1][0xef][0xbc][0x8c][0xe6][0x9c][0x89][0xe5][0xbc][0xb9][0xe6][0x80][0xa7][0xef][0xbc][0x8c][0xe5][0xa5][0xbd][0xe5][0xa4][0xb9][0xe6][0x8c][0x81][0xe3][0x80][0x82]</FONT></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.521; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.521; org.apache.http.impl.conn.Wire;  << "<TD align=middle bgColor=#f6f6f6 height=29><FONT size=2>[0xe5][0x95][0x86][0xe5][0x93][0x81][0xe6][0x9d][0x90][0xe8][0xb4][0xa8]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.521; org.apache.http.impl.conn.Wire;  << "<TD width=255 bgColor=#f6f6f6><FONT size=2>[0xe7][0xbe][0x8e][0xe8][0x80][0x90][0xe7][0x93][0xb7]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.522; org.apache.http.impl.conn.Wire;  << "<TD align=middle width=80 bgColor=#f6f6f6><FONT size=2>[0xe5][0x95][0x86][0xe5][0x93][0x81][0xe5][0xb0][0xba][0xe5][0xaf][0xb8]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.522; org.apache.http.impl.conn.Wire;  << "<TD width=249 bgColor=#f6f6f6>[0xe9][0x95][0xbf][0xe7][0xba][0xa6]21.5CM</TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.522; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.522; org.apache.http.impl.conn.Wire;  << "<TD align=middle bgColor=#f6f6f6><FONT size=2>[0xe5][0x95][0x86][0xe5][0x93][0x81][0xe5][0x93][0x81][0xe7][0x89][0x8c]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.522; org.apache.http.impl.conn.Wire;  << "<TD width=255 bgColor=#f6f6f6></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.522; org.apache.http.impl.conn.Wire;  << "<TD align=middle width=80 bgColor=#f6f6f6 height=29><FONT size=2>[0xe5][0x95][0x86][0xe5][0x93][0x81][0xe5][0x8c][0x85][0xe8][0xa3][0x85]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.522; org.apache.http.impl.conn.Wire;  << "<TD width=249 bgColor=#f6f6f6>[0xe6][0x97][0xa0]</TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.523; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.523; org.apache.http.impl.conn.Wire;  << "<TD align=middle bgColor=#f6f6f6 height=29><FONT size=2>[0xe5][0x95][0x86][0xe5][0x93][0x81][0xe9][0x87][0x8d][0xe9][0x87][0x8f]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.523; org.apache.http.impl.conn.Wire;  << "<TD width=255 bgColor=#f6f6f6>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.523; org.apache.http.impl.conn.Wire;  << "<P>30</P></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.523; org.apache.http.impl.conn.Wire;  << "<TD align=middle width=80 bgColor=#f6f6f6><FONT size=2>[0xe5][0x95][0x86][0xe5][0x93][0x81][0xe8][0xa7][0x84][0xe6][0xa0][0xbc]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.523; org.apache.http.impl.conn.Wire;  << "<TD width=249 bgColor=#f6f6f6></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.523; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.523; org.apache.http.impl.conn.Wire;  << "<TD align=middle bgColor=#f6f6f6 height=29><FONT size=2>[0xe9][0xa2][0x9c][0xe8][0x89][0xb2][0xe6][0xac][0xbe][0xe5][0xbc][0x8f]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.524; org.apache.http.impl.conn.Wire;  << "<TD width=255 bgColor=#f6f6f6>[0xe9][0xbb][0x84][0xe8][0x89][0xb2]</TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.524; org.apache.http.impl.conn.Wire;  << "<TD align=middle width=80 bgColor=#f6f6f6><FONT size=2>[0xe8][0xa3][0x85][0xe7][0xae][0xb1][0xe6][0x95][0xb0][0xe9][0x87][0x8f]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.524; org.apache.http.impl.conn.Wire;  << "<TD width=249 bgColor=#f6f6f6>1000</TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.524; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.524; org.apache.http.impl.conn.Wire;  << "<TD align=middle bgColor=#f6f6f6 height=29><FONT size=2>[0xe6][0xb8][0xa9][0xe9][0xa6][0xa8][0xe6][0x8f][0x90][0xe9][0x86][0x92]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.524; org.apache.http.impl.conn.Wire;  << "<TD width=608 bgColor=#f6f6f6 colSpan=3>[0xe3][0x80][0x80]</TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.524; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.524; org.apache.http.impl.conn.Wire;  << "<TD colSpan=4 height=313>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.525; org.apache.http.impl.conn.Wire;  << "<TABLE id=table3 height=345 cellSpacing=0 cellPadding=0 width=700 border=0>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.525; org.apache.http.impl.conn.Wire;  << "<TBODY>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.525; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.525; org.apache.http.impl.conn.Wire;  << "<TD height=131>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.525; org.apache.http.impl.conn.Wire;  << "<P align=center><BR><BR><BR><BR>&nbsp;</P></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.525; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.525; org.apache.http.impl.conn.Wire;  << "<TD height=131><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201212/2012122410564934.jpg border=0></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.525; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.525; org.apache.http.impl.conn.Wire;  << "<TD height=100>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.526; org.apache.http.impl.conn.Wire;  << "<P align=center><BR><BR>&nbsp;</P></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.526; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.526; org.apache.http.impl.conn.Wire;  << "<TD height=131><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201212/2012122410564950.jpg border=0></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.526; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.526; org.apache.http.impl.conn.Wire;  << "<TD height=100>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.526; org.apache.http.impl.conn.Wire;  << "<P align=center><BR><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201403/2014032515340859.png border=0><BR><BR><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201403/2014032515340851.png border=0><BR><BR><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201403/2014032515340811.png border=0><BR><BR><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201403/2014032515340850.png border=0><BR><BR><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201403/2014032515340838.png border=0><BR><BR><BR><BR><BR><BR>&nbsp;</P></TD></TR></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.526; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.527; org.apache.http.impl.conn.Wire;  << "<TD height=131><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201212/2012122410564910.jpg border=0></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.527; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.527; org.apache.http.impl.conn.Wire;  << "<TD height=100>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.527; org.apache.http.impl.conn.Wire;  << "<P align=center><STRONG><FONT size=4></FONT></STRONG></P></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.527; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.527; org.apache.http.impl.conn.Wire;  << "<TD height=131><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201212/2012122410564955.jpg border=0></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.527; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.527; org.apache.http.impl.conn.Wire;  << "<TD height=100>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.528; org.apache.http.impl.conn.Wire;  << "<P align=center><BR>&nbsp;</P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201212/2012122915213662.jpg border=0>?[0x18][0xe5][0xae][0xb6][0xe5][0xa4][0xa9][0xe4][0xb8][0x8b][0xe5][0xb0][0x8f][0xe9][0xbb][0x84][0xe4][0xba][0xba][0xe7][0xbe][0x8e][0xe8][0x80][0x90][0xe7][0x93][0xb7][0xe5][0x8d][0xa1][0xe9][0x80][0x9a][0xe5][0x84][0xbf][0xe7][0xab][0xa5][0xe7][0xad][0xb7]-[0xe9][0xbb][0x84][0xe8][0x89][0xb2][0xe7][0xad][0xb7][0xe5][0xad][0x90][0xec]"47[0xed]?[0x18][0xe5][0xae][0xb6][0xe5][0xa4][0xa9][0xe4][0xb8][0x8b][0xe5][0xb0][0x8f][0xe9][0xbb][0x84][0xe4][0xba][0xba][0xe7][0xbe][0x8e][0xe8][0x80][0x90][0xe7][0x93][0xb7][0xe5][0x8d][0xa1][0xe9][0x80][0x9a][0xe5][0x84][0xbf][0xe7][0xab][0xa5][0xe7][0xad][0xb7]-[0xe9][0xbb][0x84][0xe8][0x89][0xb2][0xe7][0xad][0xb7][0xe5][0xad][0x90][0xee]$4403[0xef][0x7][0x15][0x1e]w[0x1]<[0xd0][0x0][0x0][0xb][0xa7][0xe9]42014032515284014.png[0xea][0x8]@[0xb0][0x0][0x0][0xeb][0x82]?[0xd3][0x1c]<TABLE id=table2 cellSpacing=5 cellPadding=5 width=700 border=0>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.528; org.apache.http.impl.conn.Wire;  << "<TBODY>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.528; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.528; org.apache.http.impl.conn.Wire;  << "<TD align=middle bgColor=#f6f6f6 colSpan=4 height=30><FONT color=#808080 size=6>[0xe8][0xa7][0x84][0xc2][0xb7][0xe6][0xa0][0xbc][0xc2][0xb7][0xe5][0x8f][0x82][0xc2][0xb7][0xe6][0x95][0xb0]</FONT></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.528; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.528; org.apache.http.impl.conn.Wire;  << "<TD align=middle width=80 bgColor=#f6f6f6 height=29><FONT style=BACKGROUND-COLOR: #f6f6f6 face=[0xe5][0xae][0x8b][0xe4][0xbd][0x93] size=2>[0xe5][0x95][0x86][0xe5][0x93][0x81][0xe6][0xa6][0x82][0xe8][0xbf][0xb0]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.529; org.apache.http.impl.conn.Wire;  << "<TD width=608 bgColor=#f6f6f6 colSpan=3><FONT size=2>[0xe5][0x96][0x9c][0xe6][0xac][0xa2][0xe7][0xa5][0x9e][0xe5][0x81][0xb7][0xe5][0xa5][0xb6][0xe7][0x88][0xb8][0xe9][0x87][0x8c][0xe7][0x9a][0x84][0xe9][0x82][0xa3][0xe4][0xba][0x9b][0xe5][0xb0][0x8f][0xe9][0xbb][0x84][0xe4][0xba][0xba][0xe5][0x90][0xa7][0xef][0xbc][0x8c][0xe5][0x8f][0xaf][0xe7][0x88][0xb1][0xe7][0x81][0xb5][0xe6][0xb4][0xbb][0xe3][0x80][0x81][0xe4][0xb9][0x96][0xe5][0xb7][0xa7][0xe7][0xb2][0xbe][0xe7][0x81][0xb5][0xef][0xbc][0x8c][0xe7][0x9b][0xb8][0xe4][0xbf][0xa1][0xe9][0x82][0xa3][0xe6][0xa8][0xa1][0xe6][0xa0][0xb7][0xe9][0x82][0xa3][0xe7][0x8a][0xb6][0xe6][0x80][0x81][0xe9][0x82][0xa3][0xe6][0x83][0x85][0xe6][0x99][0xaf][0xe4][0xbc][0x9a][0xe4][0xbb][0xa4][0xe7][0x9c][0x8b][0xe5][0x88][0xb0][0xe8][0xbf][0x87][0xe4][0xbb][0x96][0xe4][0xbb][0xac][0xe7][0x9a][0x84][0xe6][0xaf][0x8f][0xe4][0xb8][0xaa][0xe4][0xba][0xba][0xe9][0x83][0xbd][0xe9][0x9a][0xbe][0xe5][0xbf][0x98][0xe3][0x80][0x82][0xe7][0x8e][0xb0][0xe5][0x9c][0xa8][0xe5][0xae][0x83][0xe6][0x9d][0xa5][0xe4][0xba][0x86][0xef][0xbc][0x8c][0xe6][0x9d][0xa5][0xe5][0x88][0xb0][0xe4][0xba][0x86][0xe6][0x88][0x91][0xe4][0xbb][0xac][0xe7][0x9a][0x84][0xe9][0x9d][0xa2][0xe5][0x89][0x8d][0xef][0xbc][0x8c][0xe5][0xb0][0xb1][0xe5][0x9c][0xa8][0xe6][0x88][0x91][0xe4][0xbb][0xac][0xe7][0x9a][0x84][0xe4][0xb8][0x80][0xe6][0x97][0xa5][0xe4][0xb8][0x89][0xe9][0xa4][0x90][0xe9][0x87][0x8c][0xe3][0x80][0x82][0xe8][0xbf][0x99][0xe7][0xa7][0x8d][0xe8][0xae][0xbe][0xe8][0xae][0xa1][0xe6][0x98][0xaf][0xe4][0xba][0xba][0xe6][0x80][0xa7][0xe7][0x9a][0x84][0xe7][0xa7][0x91][0xe5][0xad][0xa6][0xe7][0x9a][0x84][0xef][0xbc][0x8c][0xe6][0x98][0xaf][0xe4][0xb8][0xba][0xe4][0xba][0x86][0xe5][0xad][0xa6][0xe9][0xbd][0xa1][0xe5][0x89][0x8d][0xe5][0x84][0xbf][0xe7][0xab][0xa5][0xe5][0xad][0xa6][0xe7][0xad][0xb7][0xe6][0x97][0xb6][0xe4][0xbd][0xbf][0xe7][0x94][0xa8][0xef][0xbc][0x8c][0xe8][0xb5][0xb7][0xe5][0x88][0xb0][0xe5][0xbc][0x95][0xe5][0xaf][0xbc][0xe3][0x80][0x81][0xe5][0xad][0xa6][0xe4][0xb9][0xa0][0xe5][0x92][0x8c][0xe7][0xba][0xa0][0xe6][0xad][0xa3][0xe4][0xbd][0x9c][0xe7][0x94][0xa8][0xe3][0x80][0x82][0xe5][0xaf][0xb9][0xe4][0xba][0x8e][0xe4][0xbb][0xa5][0xe5][0x90][0x8e][0xe7][0x94][0xa8][0xe7][0xac][0x94][0xe4][0xb9][0x9f][0xe6][0x98][0xaf][0xe4][0xb8][0x80][0xe7][0xa7][0x8d][0xe6][0x8f][0x90][0xe5][0x8d][0x87][0xe5][0x92][0x8c][0xe4][0xbf][0x83][0xe8][0xbf][0x9b][0xe3][0x80][0x82][0xe6][0x98][0x93][0xe6][0x8a][0x8a][0xe6][0x8f][0xa1][0xef][0xbc][0x8c][0xe6][0x9c][0x89][0xe5][0xbc][0xb9][0xe6][0x80][0xa7][0xef][0xbc][0x8c][0xe5][0xa5][0xbd][0xe5][0xa4][0xb9][0xe6][0x8c][0x81][0xe3][0x80][0x82]</FONT></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.529; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.529; org.apache.http.impl.conn.Wire;  << "<TD align=middle bgColor=#f6f6f6 height=29><FONT size=2>[0xe5][0x95][0x86][0xe5][0x93][0x81][0xe6][0x9d][0x90][0xe8][0xb4][0xa8]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.530; org.apache.http.impl.conn.Wire;  << "<TD width=255 bgColor=#f6f6f6><FONT size=2>[0xe7][0xbe][0x8e][0xe8][0x80][0x90][0xe7][0x93][0xb7]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.530; org.apache.http.impl.conn.Wire;  << "<TD align=middle width=80 bgColor=#f6f6f6><FONT size=2>[0xe5][0x95][0x86][0xe5][0x93][0x81][0xe5][0xb0][0xba][0xe5][0xaf][0xb8]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.530; org.apache.http.impl.conn.Wire;  << "<TD width=249 bgColor=#f6f6f6>[0xe9][0x95][0xbf][0xe7][0xba][0xa6]21.5CM</TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.530; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.530; org.apache.http.impl.conn.Wire;  << "<TD align=middle bgColor=#f6f6f6><FONT size=2>[0xe5][0x95][0x86][0xe5][0x93][0x81][0xe5][0x93][0x81][0xe7][0x89][0x8c]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.530; org.apache.http.impl.conn.Wire;  << "<TD width=255 bgColor=#f6f6f6></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.531; org.apache.http.impl.conn.Wire;  << "<TD align=middle width=80 bgColor=#f6f6f6 height=29><FONT size=2>[0xe5][0x95][0x86][0xe5][0x93][0x81][0xe5][0x8c][0x85][0xe8][0xa3][0x85]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.531; org.apache.http.impl.conn.Wire;  << "<TD width=249 bgColor=#f6f6f6>[0xe6][0x97][0xa0]</TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.531; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.531; org.apache.http.impl.conn.Wire;  << "<TD align=middle bgColor=#f6f6f6 height=29><FONT size=2>[0xe5][0x95][0x86][0xe5][0x93][0x81][0xe9][0x87][0x8d][0xe9][0x87][0x8f]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.531; org.apache.http.impl.conn.Wire;  << "<TD width=255 bgColor=#f6f6f6>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.531; org.apache.http.impl.conn.Wire;  << "<P>30</P></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.531; org.apache.http.impl.conn.Wire;  << "<TD align=middle width=80 bgColor=#f6f6f6><FONT size=2>[0xe5][0x95][0x86][0xe5][0x93][0x81][0xe8][0xa7][0x84][0xe6][0xa0][0xbc]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.531; org.apache.http.impl.conn.Wire;  << "<TD width=249 bgColor=#f6f6f6></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.532; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.532; org.apache.http.impl.conn.Wire;  << "<TD align=middle bgColor=#f6f6f6 height=29>"
+DEBUG - 2015-12-28 15:58:20.532; org.apache.http.impl.conn.Wire;  << "<FONT size=2>[0xe9][0xa2][0x9c][0xe8][0x89][0xb2][0xe6][0xac][0xbe][0xe5][0xbc][0x8f]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.532; org.apache.http.impl.conn.Wire;  << "<TD width=255 bgColor=#f6f6f6>[0xe9][0xbb][0x84][0xe8][0x89][0xb2]/[0xe8][0x93][0x9d][0xe8][0x89][0xb2]</TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.532; org.apache.http.impl.conn.Wire;  << "<TD align=middle width=80 bgColor=#f6f6f6><FONT size=2>[0xe8][0xa3][0x85][0xe7][0xae][0xb1][0xe6][0x95][0xb0][0xe9][0x87][0x8f]</FONT></"
+DEBUG - 2015-12-28 15:58:20.533; org.apache.http.impl.conn.Wire;  << "[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.533; org.apache.http.impl.conn.Wire;  << "143b[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.533; org.apache.http.impl.conn.Wire;  << "TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.533; org.apache.http.impl.conn.Wire;  << "<TD width=249 bgColor=#f6f6f6>10000[0xe5][0x8f][0x8c]</TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.533; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.533; org.apache.http.impl.conn.Wire;  << "<TD align=middle bgColor=#f6f6f6 height=29><FONT size=2>[0xe6][0xb8][0xa9][0xe9][0xa6][0xa8][0xe6][0x8f][0x90][0xe9][0x86][0x92]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.533; org.apache.http.impl.conn.Wire;  << "<TD width=608 bgColor=#f6f6f6 colSpan=3>[0xe3][0x80][0x80]</TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.533; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.534; org.apache.http.impl.conn.Wire;  << "<TD colSpan=4 height=313>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.534; org.apache.http.impl.conn.Wire;  << "<TABLE id=table3 height=345 cellSpacing=0 cellPadding=0 width=700 border=0>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.534; org.apache.http.impl.conn.Wire;  << "<TBODY>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.534; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.534; org.apache.http.impl.conn.Wire;  << "<TD height=131>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.534; org.apache.http.impl.conn.Wire;  << "<P align=center><BR><BR><BR><BR>&nbsp;</P></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.534; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.535; org.apache.http.impl.conn.Wire;  << "<TD height=131><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201212/2012122410564934.jpg border=0></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.535; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.535; org.apache.http.impl.conn.Wire;  << "<TD height=100>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.535; org.apache.http.impl.conn.Wire;  << "<P align=center><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201403/2014032515284042.png border=0><BR><BR><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201403/2014032515284033.png border=0></P>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.535; org.apache.http.impl.conn.Wire;  << "<P align=left><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201403/2014032515284092.png border=0></P>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.535; org.apache.http.impl.conn.Wire;  << "<P align=center><BR><BR><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201403/2014032515284032.png border=0><BR><BR><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201403/2014032515284014.png border=0><BR><BR><BR><BR>&nbsp;</P></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.535; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.536; org.apache.http.impl.conn.Wire;  << "<TD height=131><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201212/2012122410564950.jpg border=0></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.536; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.536; org.apache.http.impl.conn.Wire;  << "<TD height=100>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.536; org.apache.http.impl.conn.Wire;  << "<P align=center><BR><BR><BR><BR><BR>&nbsp;</P></TD></TR></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.536; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.536; org.apache.http.impl.conn.Wire;  << "<TD height=131><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201212/2012122410564910.jpg border=0></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.536; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.536; org.apache.http.impl.conn.Wire;  << "<TD height=100>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.537; org.apache.http.impl.conn.Wire;  << "<P align=center><STRONG><FONT size=4></FONT></STRONG></P></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.537; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.537; org.apache.http.impl.conn.Wire;  << "<TD height=131><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201212/2012122410564955.jpg border=0></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.537; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.537; org.apache.http.impl.conn.Wire;  << "<TD height=100>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.537; org.apache.http.impl.conn.Wire;  << "<P align=center><BR>&nbsp;</P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><IMG   src=http://www.5252jia.com/Shop/UploadPhotos/201212/2012122915213662.jpg border=0>?[0x18][0xe5][0xae][0xb6][0xe5][0xa4][0xa9][0xe4][0xb8][0x8b][0xe5][0xb0][0x8f][0xe9][0xbb][0x84][0xe4][0xba][0xba][0xe7][0xbe][0x8e][0xe8][0x80][0x90][0xe7][0x93][0xb7][0xe5][0x8d][0xa1][0xe9][0x80][0x9a][0xe5][0x84][0xbf][0xe7][0xab][0xa5][0xe7][0xad][0xb7]-[0xe8][0x93][0x9d][0xe8][0x89][0xb2][0xe7][0xad][0xb7][0xe5][0xad][0x90][0xec]"47[0xed]?[0x18][0xe5][0xae][0xb6][0xe5][0xa4][0xa9][0xe4][0xb8][0x8b][0xe5][0xb0][0x8f][0xe9][0xbb][0x84][0xe4][0xba][0xba][0xe7][0xbe][0x8e][0xe8][0x80][0x90][0xe7][0x93][0xb7][0xe5][0x8d][0xa1][0xe9][0x80][0x9a][0xe5][0x84][0xbf][0xe7][0xab][0xa5][0xe7][0xad][0xb7]-[0xe8][0x93][0x9d][0xe8][0x89][0xb2][0xe7][0xad][0xb7][0xe5][0xad][0x90][0xee]$4404[0xef][0x7][0x15][0x1e]w[0x1]=[0x0][0x0][0x0][0xb][0xa7][0xe9]62012032110555493_S.jpg[0xea][0x8]A[0x10][0x0][0x0][0xeb][0x82]?[0xa3][0x17]<BR><BR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.537; org.apache.http.impl.conn.Wire;  << "<TABLE id=table1 border=0 width=700 bgColor=#ffffff align=center>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.538; org.apache.http.impl.conn.Wire;  << "<TBODY>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.538; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.538; org.apache.http.impl.conn.Wire;  << "<TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.538; org.apache.http.impl.conn.Wire;  << "<TABLE id=table2 border=0 cellSpacing=5 cellPadding=5 width=700>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.538; org.apache.http.impl.conn.Wire;  << "<TBODY>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.538; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.539; org.apache.http.impl.conn.Wire;  << "<TD bgColor=#f6f6f6 height=30 colSpan=4 align=middle><FONT color=#808080 size=6>[0xe8][0xa7][0x84][0xc2][0xb7][0xe6][0xa0][0xbc][0xc2][0xb7][0xe5][0x8f][0x82][0xc2][0xb7][0xe6][0x95][0xb0]</FONT></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.539; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.539; org.apache.http.impl.conn.Wire;  << "<TD bgColor=#f6f6f6 height=29 width=80 align=middle><FONT size=3 face=[0xe5][0xae][0x8b][0xe4][0xbd][0x93]>[0xe4][0xba][0xa7][0xe5][0x93][0x81][0xe6][0xa6][0x82][0xe8][0xbf][0xb0]</FONT></TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.539; org.apache.http.impl.conn.Wire;  << "<TD bgColor=#f6f6f6 width=608 colSpan=3>[0xe3][0x80][0x80][0xe6][0x9d][0xa5][0xe8][0x87][0xaa][0xe4][0xba][0x8e][0xe6][0x97][0xa5][0xe6][0x9c][0xac][0xe6][0xad][0xa3][0xe5][0x93][0x81][0xe5][0xb0][0xbe][0xe8][0xb4][0xa7][0xe4][0xbd][0x99][0xe5][0x8d][0x95][0xef][0xbc][0x8c][0xe9][0x99][0x90][0xe9][0x87][0x8f][0xe6][0x8a][0xa2][0xe8][0xb4][0xad][0xe4][0xb8][0xad][0xe3][0x80][0x82][0xe9][0x9d][0x9e][0xe4][0xb8][0x80][0xe8][0x88][0xac][0xe7][0x9a][0x84][0xe6][0x9d][0x90][0xe8][0xb4][0xa8][0xe5][0x92][0x8c][0xe5][0x81][0x9a][0xe5][0xb7][0xa5][0xef][0xbc][0x8c][0xe5][0xab][0xa9][0xe9][0xbb][0x84][0xe7][0x9a][0x84][0xe8][0x89][0xb2][0xe6][0xb3][0xbd][0xe3][0x80][0x81][0xe5][0x8e][0x9a][0xe9][0x87][0x8d][0xe7][0x9a][0x84][0xe7][0xa2][0x97][0xe4][0xbd][0x93][0xef][0xbc][0x8c][0xe7][0xb2][0x97][0xe6][0x8f][0x8f][0xe6][0xb7][0xa1][0xe5][0x86][0x99][0xe5][0x87][0xa0][0xe7][0xac][0x94][0xef][0xbc][0x8c][0xe4][0xb8][0xa4][0xe5][0x8f][0xaa][0xe7][0x9c][0xbc][0xe7][0x9d][0x9b][0xe3][0x80][0x81][0xe4][0xb8][0x80][0xe4][0xb8][0xaa][0xe9][0xbc][0xbb][0xe5][0xad][0x94][0xef][0xbc][0x8c][0xe5][0xae][0x83][0xe5][0xb0][0xb1][0xe6][0x98][0xaf][0xe4][0xb8][0x80][0xe5][0x8f][0xaa][0xe5][0xb0][0x8f][0xe9][0xbb][0x84][0xe9][0xb8][0xa1][0xe3][0x80][0x82][0xe6][0xaf][0x94][0xe6][0x9d][0xaf][0xe5][0xa4][0xa7][0xef][0xbc][0x8c][0xe6][0xaf][0x94][0xe7][0xa2][0x97][0xe5][0xb0][0x8f][0xef][0xbc][0x8c][0xe6][0x9c][0x80][0xe6][0x98][0xaf][0xe9][0x80][0x82][0xe5][0x90][0x88][0xe4][0xba][0x8e][0xe7][0xb2][0xa5][0xe6][0x88][0x96][0xe6][0x98][0xaf][0xe6][0xb1][0xa4][0xe7][0xb1][0xbb][0xe3][0x80][0x82]</TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.539; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.539; org.apache.http.impl.conn.Wire;  << "<TD bgColor=#f6f6f6 height=29 align=middle>[0xe5][0x95][0x86][0xe5][0x93][0x81][0xe6][0x9d][0x90][0xe8][0xb4][0xa8]</TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.539; org.apache.http.impl.conn.Wire;  << "<TD bgColor=#f6f6f6 width=255>[0xe3][0x80][0x80][0xe9][0x99][0xb6][0xe7][0x93][0xb7]</TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.540; org.apache.http.impl.conn.Wire;  << "<TD bgColor=#f6f6f6 width=80 align=middle>[0xe5][0x95][0x86][0xe5][0x93][0x81][0xe5][0xb0][0xba][0xe5][0xaf][0xb8]</TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.540; org.apache.http.impl.conn.Wire;  << "<TD bgColor=#f6f6f6 width=249>[0xe3][0x80][0x80]5.5*10.5*6.5CM</TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.540; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.540; org.apache.http.impl.conn.Wire;  << "<TD bgColor=#f6f6f6 align=middle>[0xe5][0x93][0x81][0xe7][0x89][0x8c][0xe5][0x95][0x86][0xe6][0xa0][0x87]</TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.540; org.apache.http.impl.conn.Wire;  << "<TD bgColor=#f6f6f6 width=255>[0xe3][0x80][0x80]</TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.540; org.apache.http.impl.conn.Wire;  << "<TD bgColor=#f6f6f6 height=29 width=80 align=middle>[0xe5][0x95][0x86][0xe5][0x93][0x81][0xe5][0x8c][0x85][0xe8][0xa3][0x85]</TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.540; org.apache.http.impl.conn.Wire;  << "<TD bgColor=#f6f6f6 width=249>[0xe3][0x80][0x80][0xe5][0xbc][0x80][0xe7][0xaa][0x97][0xe5][0xbd][0xa9][0xe7][0x9b][0x92]</TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.541; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.541; org.apache.http.impl.conn.Wire;  << "<TD bgColor=#f6f6f6 height=29 align=middle>[0xe8][0xa3][0x85][0xe7][0xae][0xb1][0xe6][0x95][0xb0][0xe9][0x87][0x8f]</TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.541; org.apache.http.impl.conn.Wire;  << "<TD bgColor=#f6f6f6 width=255>&nbsp;&nbsp;&nbsp; 50[0xe4][0xb8][0xaa]</TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.541; org.apache.http.impl.conn.Wire;  << "<TD bgColor=#f6f6f6 width=80 align=middle>[0xe5][0x95][0x86][0xe5][0x93][0x81][0xe9][0x87][0x8d][0xe9][0x87][0x8f]</TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.541; org.apache.http.impl.conn.Wire;  << "<TD bgColor=#f6f6f6 width=249>&nbsp;&nbsp;&nbsp;&nbsp; 342[0xe5][0x85][0x8b]</TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.541; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.541; org.apache.http.impl.conn.Wire;  << "<TD bgColor=#f6f6f6 height=29 align=middle>[0xe9][0xa2][0x9c][0xe8][0x89][0xb2][0xe6][0xac][0xbe][0xe5][0xbc][0x8f]</TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.541; org.apache.http.impl.conn.Wire;  << "<TD bgColor=#f6f6f6 width=255>&nbsp;[0xe3][0x80][0x80][0xe5][0xa6][0x82][0xe5][0x9b][0xbe]</TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.541; org.apache.http.impl.conn.Wire;  << "<TD bgColor=#f6f6f6 width=80 align=middle>[0xe5][0x95][0x86][0xe5][0x93][0x81][0xe8][0xa7][0x84][0xe6][0xa0][0xbc]</TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.542; org.apache.http.impl.conn.Wire;  << "<TD bgColor=#f6f6f6 width=249>[0xe3][0x80][0x80]</TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.542; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.542; org.apache.http.impl.conn.Wire;  << "<TD bgColor=#f6f6f6 height=29 align=middle>[0xe6][0xb3][0xa8][0xe6][0x84][0x8f][0xe4][0xba][0x8b][0xe9][0xa1][0xb9]</TD>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.542; org.apache.http.impl.conn.Wire;  << "<TD bgColor=#f6f6f6 width=608 colSpan=3>[0xe3][0x80][0x80]</TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.542; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.543; org.apache.http.impl.conn.Wire;  << "<TD height=313 colSpan=4>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.543; org.apache.http.impl.conn.Wire;  << "<TABLE id=table3 border=0 cellSpacing=0 cellPadding=0 width=700 height=345>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.543; org.apache.http.impl.conn.Wire;  << "<TBODY>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.543; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.543; org.apache.http.impl.conn.Wire;  << "<TD height=131>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.543; org.apache.http.impl.conn.Wire;  << "<P align=center><IMG border=0   src=http://www.5252jia.com/Shop/UploadPhotos/201202/2012022316442767.jpg><BR><BR><IMG border=0   src=http://www.5252jia.com/Shop/UploadPhotos/201202/2012022316442835.jpg><BR><BR>[0xe3][0x80][0x80]</P></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.543; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.543; org.apache.http.impl.conn.Wire;  << "<TD height=131><IMG border=0 src=http://www.5252jia.com/Shop/UploadPhotos/201103/2011031910365293.png width=700 height=131></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.543; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.544; org.apache.http.impl.conn.Wire;  << "<TD height=100>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.544; org.apache.http.impl.conn.Wire;  << "<P align=center>[0xe3][0x80][0x80]<IMG border=0   src=http://www.5252jia.com/Shop/UploadPhotos/201202/2012022316444082.jpg><BR><BR><IMG border=0   src=http://www.5252jia.com/Shop/UploadPhotos/201202/2012022316444187.jpg><BR><BR></P></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.544; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.544; org.apache.http.impl.conn.Wire;  << "<TD height=131><IMG border=0 src=http://www.5252jia.com/Shop/UploadPhotos/201103/2011031910365285.png width=700 height=131></TD></TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.544; org.apache.http.impl.conn.Wire;  << "<TR>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.544; org.apache.http.impl.conn.Wire;  << "<TD height=100>[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.544; org.apache.http.impl.conn.Wire;  << "<P align=center>[0xe3][0x80][0x80]<IMG border=0   src=http://www.5252jia.com/Shop/UploadPhotos/201202/2012022316445108.jpg><BR><BR><IMG border=0   src=http://www.5252jia.com/Shop/UploadPhotos/201202/2012022316445269.jpg><BR><BR></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>?"[0xe5][0xae][0xb6][0xe5][0xa4][0xa9][0xe4][0xb8][0x8b]RILAKKUM[0xe7][0xbd][0x97][0xe6][0xa3][0xae][0xe4][0xbe][0xbf][0xe5][0x88][0xa9][0xe5][0xba][0x97][0xe9][0x99][0x90][0xe5][0xae][0x9a][0xe9][0xbc][0xbb][0xe5][0xad][0x94][0xe5][0xb0][0x8f][0xe9][0xbb][0x84][0xe9][0xb8][0xa1][0xe6][0x9d][0xaf][0xe5][0xad][0x90][0xe6][0xb1][0xa4][0xe7][0xa2][0x97][0xec]"47[0xed]?"[0xe5][0xae][0xb6][0xe5][0xa4][0xa9][0xe4][0xb8][0x8b]RILAKKUM[0xe7][0xbd][0x97][0xe6][0xa3][0xae][0xe4][0xbe][0xbf][0xe5][0x88][0xa9][0xe5][0xba][0x97][0xe9][0x99][0x90][0xe5][0xae][0x9a][0xe9][0xbc][0xbb][0xe5][0xad][0x94][0xe5][0xb0][0x8f][0xe9][0xbb][0x84][0xe9][0xb8][0xa1][0xe6][0x9d][0xaf][0xe5][0xad][0x90][0xe6][0xb1][0xa4][0xe7][0xa2][0x97][0xee]$4570[0xef][0x7][0x15][0x1e]w[0x1]s[0xc0][0x0][0x0]"
+DEBUG - 2015-12-28 15:58:20.544; org.apache.http.impl.conn.Wire;  << "[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.545; org.apache.http.impl.conn.Wire;  << "0[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.545; org.apache.http.impl.conn.Wire;  << "[\r][\n]"
+DEBUG - 2015-12-28 15:58:20.545; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection [id: 0][route: {}->http://localhost:8080] can be kept alive indefinitely
+DEBUG - 2015-12-28 15:58:20.545; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection released: [id: 0][route: {}->http://localhost:8080][total kept alive: 1; route allocated: 1 of 32; total allocated: 1 of 128]
+DEBUG - 2015-12-28 16:18:58.719; org.apache.solr.client.solrj.impl.HttpClientUtil; Creating new http client, config:maxConnections=128&maxConnectionsPerHost=32&followRedirects=false
+DEBUG - 2015-12-28 16:18:58.977; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection request: [route: {}->http://localhost:8080][total kept alive: 0; route allocated: 0 of 32; total allocated: 0 of 128]
+DEBUG - 2015-12-28 16:18:58.989; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection leased: [id: 0][route: {}->http://localhost:8080][total kept alive: 0; route allocated: 1 of 32; total allocated: 1 of 128]
+DEBUG - 2015-12-28 16:18:58.996; org.apache.http.impl.conn.DefaultClientConnectionOperator; Connecting to localhost:8080
+DEBUG - 2015-12-28 16:18:59.023; org.apache.http.client.protocol.RequestAddCookies; CookieSpec selected: best-match
+DEBUG - 2015-12-28 16:18:59.036; org.apache.http.client.protocol.RequestAuthCache; Auth cache not set in the context
+DEBUG - 2015-12-28 16:18:59.038; org.apache.http.client.protocol.RequestTargetAuthentication; Target auth state: UNCHALLENGED
+DEBUG - 2015-12-28 16:18:59.039; org.apache.http.client.protocol.RequestProxyAuthentication; Proxy auth state: UNCHALLENGED
+DEBUG - 2015-12-28 16:18:59.039; org.apache.http.impl.client.DefaultRequestDirector; Attempt 1 to execute request
+DEBUG - 2015-12-28 16:18:59.040; org.apache.http.impl.conn.DefaultClientConnection; Sending request: GET /solr/select?q=product_name%3A%E5%B0%8F%E9%BB%84%E4%BA%BA&fq=product_price%3A%5B1+TO+10%5D&sort=product_price+asc&start=0&rows=10&fl=id%2Cproduct_name%2Cproduct_catalog%2Cproduct_price%2Cproduct_picture&df=product_keywords&hl=true&hl.fl=product_name&hl.simple.pre=%3Cem%3E&hl.simple.post=%3C%2Fem%3E&wt=javabin&version=2 HTTP/1.1
+DEBUG - 2015-12-28 16:18:59.041; org.apache.http.impl.conn.Wire;  >> "GET /solr/select?q=product_name%3A%E5%B0%8F%E9%BB%84%E4%BA%BA&fq=product_price%3A%5B1+TO+10%5D&sort=product_price+asc&start=0&rows=10&fl=id%2Cproduct_name%2Cproduct_catalog%2Cproduct_price%2Cproduct_picture&df=product_keywords&hl=true&hl.fl=product_name&hl.simple.pre=%3Cem%3E&hl.simple.post=%3C%2Fem%3E&wt=javabin&version=2 HTTP/1.1[\r][\n]"
+DEBUG - 2015-12-28 16:18:59.043; org.apache.http.impl.conn.Wire;  >> "User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrServer] 1.0[\r][\n]"
+DEBUG - 2015-12-28 16:18:59.044; org.apache.http.impl.conn.Wire;  >> "Host: localhost:8080[\r][\n]"
+DEBUG - 2015-12-28 16:18:59.044; org.apache.http.impl.conn.Wire;  >> "Connection: Keep-Alive[\r][\n]"
+DEBUG - 2015-12-28 16:18:59.044; org.apache.http.impl.conn.Wire;  >> "[\r][\n]"
+DEBUG - 2015-12-28 16:18:59.045; org.apache.http.impl.conn.DefaultClientConnection; >> GET /solr/select?q=product_name%3A%E5%B0%8F%E9%BB%84%E4%BA%BA&fq=product_price%3A%5B1+TO+10%5D&sort=product_price+asc&start=0&rows=10&fl=id%2Cproduct_name%2Cproduct_catalog%2Cproduct_price%2Cproduct_picture&df=product_keywords&hl=true&hl.fl=product_name&hl.simple.pre=%3Cem%3E&hl.simple.post=%3C%2Fem%3E&wt=javabin&version=2 HTTP/1.1
+DEBUG - 2015-12-28 16:18:59.046; org.apache.http.impl.conn.DefaultClientConnection; >> User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrServer] 1.0
+DEBUG - 2015-12-28 16:18:59.047; org.apache.http.impl.conn.DefaultClientConnection; >> Host: localhost:8080
+DEBUG - 2015-12-28 16:18:59.047; org.apache.http.impl.conn.DefaultClientConnection; >> Connection: Keep-Alive
+DEBUG - 2015-12-28 16:18:59.056; org.apache.http.impl.conn.Wire;  << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG - 2015-12-28 16:18:59.057; org.apache.http.impl.conn.Wire;  << "Server: Apache-Coyote/1.1[\r][\n]"
+DEBUG - 2015-12-28 16:18:59.058; org.apache.http.impl.conn.Wire;  << "Content-Type: application/octet-stream[\r][\n]"
+DEBUG - 2015-12-28 16:18:59.058; org.apache.http.impl.conn.Wire;  << "Content-Length: 1156[\r][\n]"
+DEBUG - 2015-12-28 16:18:59.058; org.apache.http.impl.conn.Wire;  << "Date: Mon, 28 Dec 2015 08:18:59 GMT[\r][\n]"
+DEBUG - 2015-12-28 16:18:59.058; org.apache.http.impl.conn.Wire;  << "[\r][\n]"
+DEBUG - 2015-12-28 16:18:59.060; org.apache.http.impl.conn.DefaultClientConnection; Receiving response: HTTP/1.1 200 OK
+DEBUG - 2015-12-28 16:18:59.061; org.apache.http.impl.conn.DefaultClientConnection; << HTTP/1.1 200 OK
+DEBUG - 2015-12-28 16:18:59.062; org.apache.http.impl.conn.DefaultClientConnection; << Server: Apache-Coyote/1.1
+DEBUG - 2015-12-28 16:18:59.062; org.apache.http.impl.conn.DefaultClientConnection; << Content-Type: application/octet-stream
+DEBUG - 2015-12-28 16:18:59.062; org.apache.http.impl.conn.DefaultClientConnection; << Content-Length: 1156
+DEBUG - 2015-12-28 16:18:59.063; org.apache.http.impl.conn.DefaultClientConnection; << Date: Mon, 28 Dec 2015 08:18:59 GMT
+DEBUG - 2015-12-28 16:18:59.067; org.apache.http.impl.client.DefaultRequestDirector; Connection can be kept alive indefinitely
+DEBUG - 2015-12-28 16:18:59.082; org.apache.http.impl.conn.Wire;  << "[0x2][0xa3][0xe0].responseHeader[0xa3][0xe0]&status[0x6][0x0][0x0][0x0][0x0][0xe0]%QTimeC[0xe0]&params[0xad][0xe0]$sort1product_price asc[0xe0]-hl.simple.pre$<em>[0xe0]%hl.fl,product_name[0xe0]"wt'javabin[0xe0]"hl$true[0xe0]'version!2[0xe0]$rows"10[0xe0]"fl?[0x1e]id,product_name,product_catalog,product_price,product_picture[0xe0]"df0product_keywords[0xe0]%start!0[0xe0]!q6product_name:[0xe5][0xb0][0x8f][0xe9][0xbb][0x84][0xe4][0xba][0xba][0xe0].hl.simple.post%</em>[0xe0]"fq7product_price:[1 TO 10][0xe0](response[0xc][0x83]d`[0x0][0x84][0xb][0xa5][0xe0]/product_picture42014032515340838.png[0xe0]-product_price[0x8]@[0xb0][0x0][0x0][0xe0]/product_catalog"47[0xe0],product_name?[0x18][0xe5][0xae][0xb6][0xe5][0xa4][0xa9][0xe4][0xb8][0x8b][0xe5][0xb0][0x8f][0xe9][0xbb][0x84][0xe4][0xba][0xba][0xe7][0xbe][0x8e][0xe8][0x80][0x90][0xe7][0x93][0xb7][0xe5][0x8d][0xa1][0xe9][0x80][0x9a][0xe5][0x84][0xbf][0xe7][0xab][0xa5][0xe7][0xad][0xb7]-[0xe9][0xbb][0x84][0xe8][0x89][0xb2][0xe7][0xad][0xb7][0xe5][0xad][0x90][0xe0]"id$4403[0xb][0xa5][0xf3]42014032515284014.png[0xf4][0x8]@[0xb0][0x0][0x0][0xf5]"47[0xf6]?[0x18][0xe5][0xae][0xb6][0xe5][0xa4][0xa9][0xe4][0xb8][0x8b][0xe5][0xb0][0x8f][0xe9][0xbb][0x84][0xe4][0xba][0xba][0xe7][0xbe][0x8e][0xe8][0x80][0x90][0xe7][0x93][0xb7][0xe5][0x8d][0xa1][0xe9][0x80][0x9a][0xe5][0x84][0xbf][0xe7][0xab][0xa5][0xe7][0xad][0xb7]-[0xe8][0x93][0x9d][0xe8][0x89][0xb2][0xe7][0xad][0xb7][0xe5][0xad][0x90][0xf7]$4404[0xb][0xa5][0xf3]62012032110555493_S.jpg[0xf4][0x8]A[0x10][0x0][0x0][0xf5]"47[0xf6]?"[0xe5][0xae][0xb6][0xe5][0xa4][0xa9][0xe4][0xb8][0x8b]RILAKKUM[0xe7][0xbd][0x97][0xe6][0xa3][0xae][0xe4][0xbe][0xbf][0xe5][0x88][0xa9][0xe5][0xba][0x97][0xe9][0x99][0x90][0xe5][0xae][0x9a][0xe9][0xbc][0xbb][0xe5][0xad][0x94][0xe5][0xb0][0x8f][0xe9][0xbb][0x84][0xe9][0xb8][0xa1][0xe6][0x9d][0xaf][0xe5][0xad][0x90][0xe6][0xb1][0xa4][0xe7][0xa2][0x97][0xf7]$4570[0xb][0xa5][0xf3]42014032417271233.png[0xf4][0x8]A [0x0][0x0][0xf5]"17[0xf6]?&[0xe7][0xa5][0x9e][0xe5][0x81][0xb7][0xe5][0xa5][0xb6][0xe7][0x88][0xb8][0xe7][0x94][0xb5][0xe5][0xbd][0xb1][0xe5][0x90][0x8c][0xe6][0xac][0xbe]&nbsp;[0xe6][0x83][0xa8][0xe5][0x8f][0xab][0xe5][0x8f][0x91][0xe6][0xb3][0x84][0xe5][0x85][0xac][0xe4][0xbb][0x94]&nbsp;[0xe5][0x8f][0x91][0xe5][0xa3][0xb0][0xe5][0xb0][0x8f][0xe9][0xbb][0x84][0xe4][0xba][0xba][0xf7]!3[0xe0],highlighting[0xa4][0xe0]$4403[0xa1][0xf6][0x81]?![0xe5][0xae][0xb6][0xe5][0xa4][0xa9][0xe4][0xb8][0x8b]<em>[0xe5][0xb0][0x8f][0xe9][0xbb][0x84][0xe4][0xba][0xba]</em>[0xe7][0xbe][0x8e][0xe8][0x80][0x90][0xe7][0x93][0xb7][0xe5][0x8d][0xa1][0xe9][0x80][0x9a][0xe5][0x84][0xbf][0xe7][0xab][0xa5][0xe7][0xad][0xb7]-[0xe9][0xbb][0x84][0xe8][0x89][0xb2][0xe7][0xad][0xb7][0xe5][0xad][0x90][0xe0]$4404[0xa1][0xf6][0x81]?![0xe5][0xae][0xb6][0xe5][0xa4][0xa9][0xe4][0xb8][0x8b]<em>[0xe5][0xb0][0x8f][0xe9][0xbb][0x84][0xe4][0xba][0xba]</em>[0xe7][0xbe][0x8e][0xe8][0x80][0x90][0xe7][0x93][0xb7][0xe5][0x8d][0xa1][0xe9][0x80][0x9a][0xe5][0x84][0xbf][0xe7][0xab][0xa5][0xe7][0xad][0xb7]-[0xe8][0x93][0x9d][0xe8][0x89][0xb2][0xe7][0xad][0xb7][0xe5][0xad][0x90][0xe0]$4570[0xa1][0xf6][0x81]?+[0xe5][0xae][0xb6][0xe5][0xa4][0xa9][0xe4][0xb8][0x8b]RILAKKUM[0xe7][0xbd][0x97][0xe6][0xa3][0xae][0xe4][0xbe][0xbf][0xe5][0x88][0xa9][0xe5][0xba][0x97][0xe9][0x99][0x90][0xe5][0xae][0x9a][0xe9][0xbc][0xbb][0xe5][0xad][0x94]<em>[0xe5][0xb0][0x8f][0xe9][0xbb][0x84]</em>[0xe9][0xb8][0xa1][0xe6][0x9d][0xaf][0xe5][0xad][0x90][0xe6][0xb1][0xa4][0xe7][0xa2][0x97][0xe0]!3[0xa1][0xf6][0x81]?/[0xe7][0xa5][0x9e][0xe5][0x81][0xb7][0xe5][0xa5][0xb6][0xe7][0x88][0xb8][0xe7][0x94][0xb5][0xe5][0xbd][0xb1][0xe5][0x90][0x8c][0xe6][0xac][0xbe]&nbsp;[0xe6][0x83][0xa8][0xe5][0x8f][0xab][0xe5][0x8f][0x91][0xe6][0xb3][0x84][0xe5][0x85][0xac][0xe4][0xbb][0x94]&nbsp;[0xe5][0x8f][0x91][0xe5][0xa3][0xb0]<em>[0xe5][0xb0][0x8f][0xe9][0xbb][0x84][0xe4][0xba][0xba]</em>"
+DEBUG - 2015-12-28 16:18:59.085; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection [id: 0][route: {}->http://localhost:8080] can be kept alive indefinitely
+DEBUG - 2015-12-28 16:18:59.086; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection released: [id: 0][route: {}->http://localhost:8080][total kept alive: 1; route allocated: 1 of 32; total allocated: 1 of 128]
+DEBUG - 2015-12-28 17:40:38.736; org.apache.solr.client.solrj.impl.HttpClientUtil; Creating new http client, config:maxConnections=128&maxConnectionsPerHost=32&followRedirects=false
+DEBUG - 2015-12-28 17:40:39.012; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection request: [route: {}->http://localhost:8080][total kept alive: 0; route allocated: 0 of 32; total allocated: 0 of 128]
+DEBUG - 2015-12-28 17:40:39.023; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection leased: [id: 0][route: {}->http://localhost:8080][total kept alive: 0; route allocated: 1 of 32; total allocated: 1 of 128]
+DEBUG - 2015-12-28 17:40:39.030; org.apache.http.impl.conn.DefaultClientConnectionOperator; Connecting to localhost:8080
+DEBUG - 2015-12-28 17:40:39.054; org.apache.http.client.protocol.RequestAddCookies; CookieSpec selected: best-match
+DEBUG - 2015-12-28 17:40:39.062; org.apache.http.client.protocol.RequestAuthCache; Auth cache not set in the context
+DEBUG - 2015-12-28 17:40:39.063; org.apache.http.client.protocol.RequestTargetAuthentication; Target auth state: UNCHALLENGED
+DEBUG - 2015-12-28 17:40:39.063; org.apache.http.client.protocol.RequestProxyAuthentication; Proxy auth state: UNCHALLENGED
+DEBUG - 2015-12-28 17:40:39.063; org.apache.http.impl.client.DefaultRequestDirector; Attempt 1 to execute request
+DEBUG - 2015-12-28 17:40:39.063; org.apache.http.impl.conn.DefaultClientConnection; Sending request: POST /solr/update?wt=javabin&version=2 HTTP/1.1
+DEBUG - 2015-12-28 17:40:39.064; org.apache.http.impl.conn.Wire;  >> "POST /solr/update?wt=javabin&version=2 HTTP/1.1[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.065; org.apache.http.impl.conn.Wire;  >> "User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrServer] 1.0[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.065; org.apache.http.impl.conn.Wire;  >> "Transfer-Encoding: chunked[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.065; org.apache.http.impl.conn.Wire;  >> "Content-Type: application/xml; charset=UTF-8[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.065; org.apache.http.impl.conn.Wire;  >> "Host: localhost:8080[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.065; org.apache.http.impl.conn.Wire;  >> "Connection: Keep-Alive[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.066; org.apache.http.impl.conn.Wire;  >> "[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.066; org.apache.http.impl.conn.DefaultClientConnection; >> POST /solr/update?wt=javabin&version=2 HTTP/1.1
+DEBUG - 2015-12-28 17:40:39.066; org.apache.http.impl.conn.DefaultClientConnection; >> User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrServer] 1.0
+DEBUG - 2015-12-28 17:40:39.067; org.apache.http.impl.conn.DefaultClientConnection; >> Transfer-Encoding: chunked
+DEBUG - 2015-12-28 17:40:39.067; org.apache.http.impl.conn.DefaultClientConnection; >> Content-Type: application/xml; charset=UTF-8
+DEBUG - 2015-12-28 17:40:39.067; org.apache.http.impl.conn.DefaultClientConnection; >> Host: localhost:8080
+DEBUG - 2015-12-28 17:40:39.067; org.apache.http.impl.conn.DefaultClientConnection; >> Connection: Keep-Alive
+DEBUG - 2015-12-28 17:40:39.067; org.apache.http.impl.conn.Wire;  >> "27[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.068; org.apache.http.impl.conn.Wire;  >> "<delete><query>id:c001</query></delete>"
+DEBUG - 2015-12-28 17:40:39.068; org.apache.http.impl.conn.Wire;  >> "[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.068; org.apache.http.impl.conn.Wire;  >> "0[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.068; org.apache.http.impl.conn.Wire;  >> "[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.108; org.apache.http.impl.conn.Wire;  << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.110; org.apache.http.impl.conn.Wire;  << "Server: Apache-Coyote/1.1[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.110; org.apache.http.impl.conn.Wire;  << "Content-Type: application/octet-stream[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.110; org.apache.http.impl.conn.Wire;  << "Content-Length: 41[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.110; org.apache.http.impl.conn.Wire;  << "Date: Mon, 28 Dec 2015 09:40:39 GMT[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.111; org.apache.http.impl.conn.Wire;  << "[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.111; org.apache.http.impl.conn.DefaultClientConnection; Receiving response: HTTP/1.1 200 OK
+DEBUG - 2015-12-28 17:40:39.111; org.apache.http.impl.conn.DefaultClientConnection; << HTTP/1.1 200 OK
+DEBUG - 2015-12-28 17:40:39.111; org.apache.http.impl.conn.DefaultClientConnection; << Server: Apache-Coyote/1.1
+DEBUG - 2015-12-28 17:40:39.112; org.apache.http.impl.conn.DefaultClientConnection; << Content-Type: application/octet-stream
+DEBUG - 2015-12-28 17:40:39.112; org.apache.http.impl.conn.DefaultClientConnection; << Content-Length: 41
+DEBUG - 2015-12-28 17:40:39.112; org.apache.http.impl.conn.DefaultClientConnection; << Date: Mon, 28 Dec 2015 09:40:39 GMT
+DEBUG - 2015-12-28 17:40:39.113; org.apache.http.impl.client.DefaultRequestDirector; Connection can be kept alive indefinitely
+DEBUG - 2015-12-28 17:40:39.128; org.apache.http.impl.conn.Wire;  << "[0x2][0xa1][0xe0].responseHeader[0xa2][0xe0]&status[0x6][0x0][0x0][0x0][0x0][0xe0]%QTimeV[0x2]"
+DEBUG - 2015-12-28 17:40:39.130; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection [id: 0][route: {}->http://localhost:8080] can be kept alive indefinitely
+DEBUG - 2015-12-28 17:40:39.131; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection released: [id: 0][route: {}->http://localhost:8080][total kept alive: 1; route allocated: 1 of 32; total allocated: 1 of 128]
+DEBUG - 2015-12-28 17:40:39.131; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection request: [route: {}->http://localhost:8080][total kept alive: 1; route allocated: 1 of 32; total allocated: 1 of 128]
+DEBUG - 2015-12-28 17:40:39.131; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection leased: [id: 0][route: {}->http://localhost:8080][total kept alive: 0; route allocated: 1 of 32; total allocated: 1 of 128]
+DEBUG - 2015-12-28 17:40:39.132; org.apache.http.impl.client.DefaultRequestDirector; Stale connection check
+DEBUG - 2015-12-28 17:40:39.133; org.apache.http.client.protocol.RequestAddCookies; CookieSpec selected: best-match
+DEBUG - 2015-12-28 17:40:39.133; org.apache.http.client.protocol.RequestAuthCache; Auth cache not set in the context
+DEBUG - 2015-12-28 17:40:39.133; org.apache.http.client.protocol.RequestTargetAuthentication; Target auth state: UNCHALLENGED
+DEBUG - 2015-12-28 17:40:39.133; org.apache.http.client.protocol.RequestProxyAuthentication; Proxy auth state: UNCHALLENGED
+DEBUG - 2015-12-28 17:40:39.133; org.apache.http.impl.client.DefaultRequestDirector; Attempt 1 to execute request
+DEBUG - 2015-12-28 17:40:39.134; org.apache.http.impl.conn.DefaultClientConnection; Sending request: POST /solr/update?wt=javabin&version=2 HTTP/1.1
+DEBUG - 2015-12-28 17:40:39.134; org.apache.http.impl.conn.Wire;  >> "POST /solr/update?wt=javabin&version=2 HTTP/1.1[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.134; org.apache.http.impl.conn.Wire;  >> "User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrServer] 1.0[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.134; org.apache.http.impl.conn.Wire;  >> "Transfer-Encoding: chunked[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.134; org.apache.http.impl.conn.Wire;  >> "Content-Type: application/xml; charset=UTF-8[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.134; org.apache.http.impl.conn.Wire;  >> "Host: localhost:8080[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.134; org.apache.http.impl.conn.Wire;  >> "Connection: Keep-Alive[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.135; org.apache.http.impl.conn.Wire;  >> "[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.135; org.apache.http.impl.conn.DefaultClientConnection; >> POST /solr/update?wt=javabin&version=2 HTTP/1.1
+DEBUG - 2015-12-28 17:40:39.135; org.apache.http.impl.conn.DefaultClientConnection; >> User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrServer] 1.0
+DEBUG - 2015-12-28 17:40:39.135; org.apache.http.impl.conn.DefaultClientConnection; >> Transfer-Encoding: chunked
+DEBUG - 2015-12-28 17:40:39.135; org.apache.http.impl.conn.DefaultClientConnection; >> Content-Type: application/xml; charset=UTF-8
+DEBUG - 2015-12-28 17:40:39.135; org.apache.http.impl.conn.DefaultClientConnection; >> Host: localhost:8080
+DEBUG - 2015-12-28 17:40:39.135; org.apache.http.impl.conn.DefaultClientConnection; >> Connection: Keep-Alive
+DEBUG - 2015-12-28 17:40:39.135; org.apache.http.impl.conn.Wire;  >> "23[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.136; org.apache.http.impl.conn.Wire;  >> "<delete><query>*:*</query></delete>"
+DEBUG - 2015-12-28 17:40:39.136; org.apache.http.impl.conn.Wire;  >> "[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.136; org.apache.http.impl.conn.Wire;  >> "0[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.136; org.apache.http.impl.conn.Wire;  >> "[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.245; org.apache.http.impl.conn.Wire;  << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.246; org.apache.http.impl.conn.Wire;  << "Server: Apache-Coyote/1.1[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.247; org.apache.http.impl.conn.Wire;  << "Content-Type: application/octet-stream[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.247; org.apache.http.impl.conn.Wire;  << "Content-Length: 41[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.247; org.apache.http.impl.conn.Wire;  << "Date: Mon, 28 Dec 2015 09:40:39 GMT[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.247; org.apache.http.impl.conn.Wire;  << "[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.247; org.apache.http.impl.conn.DefaultClientConnection; Receiving response: HTTP/1.1 200 OK
+DEBUG - 2015-12-28 17:40:39.248; org.apache.http.impl.conn.DefaultClientConnection; << HTTP/1.1 200 OK
+DEBUG - 2015-12-28 17:40:39.248; org.apache.http.impl.conn.DefaultClientConnection; << Server: Apache-Coyote/1.1
+DEBUG - 2015-12-28 17:40:39.248; org.apache.http.impl.conn.DefaultClientConnection; << Content-Type: application/octet-stream
+DEBUG - 2015-12-28 17:40:39.248; org.apache.http.impl.conn.DefaultClientConnection; << Content-Length: 41
+DEBUG - 2015-12-28 17:40:39.248; org.apache.http.impl.conn.DefaultClientConnection; << Date: Mon, 28 Dec 2015 09:40:39 GMT
+DEBUG - 2015-12-28 17:40:39.248; org.apache.http.impl.client.DefaultRequestDirector; Connection can be kept alive indefinitely
+DEBUG - 2015-12-28 17:40:39.249; org.apache.http.impl.conn.Wire;  << "[0x2][0xa1][0xe0].responseHeader[0xa2][0xe0]&status[0x6][0x0][0x0][0x0][0x0][0xe0]%QTime[[0x6]"
+DEBUG - 2015-12-28 17:40:39.249; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection [id: 0][route: {}->http://localhost:8080] can be kept alive indefinitely
+DEBUG - 2015-12-28 17:40:39.250; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection released: [id: 0][route: {}->http://localhost:8080][total kept alive: 1; route allocated: 1 of 32; total allocated: 1 of 128]
+DEBUG - 2015-12-28 17:40:39.253; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection request: [route: {}->http://localhost:8080][total kept alive: 1; route allocated: 1 of 32; total allocated: 1 of 128]
+DEBUG - 2015-12-28 17:40:39.253; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection leased: [id: 0][route: {}->http://localhost:8080][total kept alive: 0; route allocated: 1 of 32; total allocated: 1 of 128]
+DEBUG - 2015-12-28 17:40:39.253; org.apache.http.impl.client.DefaultRequestDirector; Stale connection check
+DEBUG - 2015-12-28 17:40:39.254; org.apache.http.client.protocol.RequestAddCookies; CookieSpec selected: best-match
+DEBUG - 2015-12-28 17:40:39.254; org.apache.http.client.protocol.RequestAuthCache; Auth cache not set in the context
+DEBUG - 2015-12-28 17:40:39.254; org.apache.http.client.protocol.RequestTargetAuthentication; Target auth state: UNCHALLENGED
+DEBUG - 2015-12-28 17:40:39.254; org.apache.http.client.protocol.RequestProxyAuthentication; Proxy auth state: UNCHALLENGED
+DEBUG - 2015-12-28 17:40:39.254; org.apache.http.impl.client.DefaultRequestDirector; Attempt 1 to execute request
+DEBUG - 2015-12-28 17:40:39.254; org.apache.http.impl.conn.DefaultClientConnection; Sending request: POST /solr/update HTTP/1.1
+DEBUG - 2015-12-28 17:40:39.255; org.apache.http.impl.conn.Wire;  >> "POST /solr/update HTTP/1.1[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.255; org.apache.http.impl.conn.Wire;  >> "Content-Type: application/x-www-form-urlencoded; charset=UTF-8[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.255; org.apache.http.impl.conn.Wire;  >> "User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrServer] 1.0[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.255; org.apache.http.impl.conn.Wire;  >> "Content-Length: 67[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.255; org.apache.http.impl.conn.Wire;  >> "Host: localhost:8080[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.255; org.apache.http.impl.conn.Wire;  >> "Connection: Keep-Alive[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.255; org.apache.http.impl.conn.Wire;  >> "[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.256; org.apache.http.impl.conn.DefaultClientConnection; >> POST /solr/update HTTP/1.1
+DEBUG - 2015-12-28 17:40:39.256; org.apache.http.impl.conn.DefaultClientConnection; >> Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+DEBUG - 2015-12-28 17:40:39.256; org.apache.http.impl.conn.DefaultClientConnection; >> User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrServer] 1.0
+DEBUG - 2015-12-28 17:40:39.256; org.apache.http.impl.conn.DefaultClientConnection; >> Content-Length: 67
+DEBUG - 2015-12-28 17:40:39.256; org.apache.http.impl.conn.DefaultClientConnection; >> Host: localhost:8080
+DEBUG - 2015-12-28 17:40:39.256; org.apache.http.impl.conn.DefaultClientConnection; >> Connection: Keep-Alive
+DEBUG - 2015-12-28 17:40:39.256; org.apache.http.impl.conn.Wire;  >> "commit=true&softCommit=false&waitSearcher=true&wt=javabin&version=2"
+DEBUG - 2015-12-28 17:40:39.397; org.apache.http.impl.conn.Wire;  << "HTTP/1.1 200 OK[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.397; org.apache.http.impl.conn.Wire;  << "Server: Apache-Coyote/1.1[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.398; org.apache.http.impl.conn.Wire;  << "Content-Type: application/octet-stream[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.398; org.apache.http.impl.conn.Wire;  << "Content-Length: 41[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.398; org.apache.http.impl.conn.Wire;  << "Date: Mon, 28 Dec 2015 09:40:39 GMT[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.398; org.apache.http.impl.conn.Wire;  << "[\r][\n]"
+DEBUG - 2015-12-28 17:40:39.398; org.apache.http.impl.conn.DefaultClientConnection; Receiving response: HTTP/1.1 200 OK
+DEBUG - 2015-12-28 17:40:39.398; org.apache.http.impl.conn.DefaultClientConnection; << HTTP/1.1 200 OK
+DEBUG - 2015-12-28 17:40:39.398; org.apache.http.impl.conn.DefaultClientConnection; << Server: Apache-Coyote/1.1
+DEBUG - 2015-12-28 17:40:39.398; org.apache.http.impl.conn.DefaultClientConnection; << Content-Type: application/octet-stream
+DEBUG - 2015-12-28 17:40:39.399; org.apache.http.impl.conn.DefaultClientConnection; << Content-Length: 41
+DEBUG - 2015-12-28 17:40:39.399; org.apache.http.impl.conn.DefaultClientConnection; << Date: Mon, 28 Dec 2015 09:40:39 GMT
+DEBUG - 2015-12-28 17:40:39.399; org.apache.http.impl.client.DefaultRequestDirector; Connection can be kept alive indefinitely
+DEBUG - 2015-12-28 17:40:39.399; org.apache.http.impl.conn.Wire;  << "[0x2][0xa1][0xe0].responseHeader[0xa2][0xe0]&status[0x6][0x0][0x0][0x0][0x0][0xe0]%QTimeZ[0x8]"
+DEBUG - 2015-12-28 17:40:39.400; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection [id: 0][route: {}->http://localhost:8080] can be kept alive indefinitely
+DEBUG - 2015-12-28 17:40:39.400; org.apache.http.impl.conn.PoolingClientConnectionManager; Connection released: [id: 0][route: {}->http://localhost:8080][total kept alive: 1; route allocated: 1 of 32; total allocated: 1 of 128]

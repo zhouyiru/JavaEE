@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<product-list>
+    <product id="1">
+        <name>联想笔记本</name>
+        <type>ln001</type>
+        <price>5000</price>
+    </product>
+    <product id="2">
+        <name>长城笔记本</name>
+        <type>cn001</type>
+        <price>3000</price>
+    </product>
+    <product id="3">
+        <name>惠普笔记本</name>
+        <type>hp001</type>
+        <price>4000</price>
+    </product>
+    <product id="4">
+        <name>戴尔笔记本</name>
+        <type>dl001</type>
+        <price>6000</price>
+    </product>
+    <product id="5">
+        <name>神州笔记本</name>
+        <type>sz001</type>
+        <price>100</price>
+    </product>
+    
+    
+    
+    
+</product-list>
